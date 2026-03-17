@@ -77,16 +77,16 @@
 
           <!-- Right Column -->
           <div class="contact-form">
-            <form action="https://formspree.io/f/placeholder" method="POST">
+            <form id="pb-contact-form" onsubmit="return submitContactForm(event)">
 
               <div class="form-row">
                 <div class="form-group">
                   <label for="first-name">First Name</label>
-                  <input type="text" id="first-name" name="first_name" required placeholder="First name">
+                  <input type="text" id="first-name" name="firstName" required placeholder="First name">
                 </div>
                 <div class="form-group">
                   <label for="last-name">Last Name</label>
-                  <input type="text" id="last-name" name="last_name" required placeholder="Last name">
+                  <input type="text" id="last-name" name="lastName" required placeholder="Last name">
                 </div>
               </div>
 
@@ -102,7 +102,7 @@
 
               <div class="form-group">
                 <label for="topic">How Can We Help?</label>
-                <select id="topic" name="topic">
+                <select id="topic" name="topic" required>
                   <option value="">Select a topic</option>
                   <option value="Project Management">Project Management</option>
                   <option value="Brand Development">Brand Development</option>
@@ -114,12 +114,16 @@
                 </select>
               </div>
 
+              <!-- Honeypot - hidden from humans, bots fill it -->
+              <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+
               <div class="form-group">
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required placeholder="Tell us about your project or goals..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary btn-lg" style="width:100%">Send Message</button>
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-lg" style="width:100%">Send Message</button>
+              <div id="form-status" style="text-align:center;margin-top:16px;font-size:14px;"></div>
 
             </form>
           </div>
@@ -183,6 +187,52 @@
         });
       }
     })();
+
+    async function submitContactForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const status = document.getElementById('form-status');
+      const form = document.getElementById('pb-contact-form');
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      status.textContent = '';
+      status.style.color = '';
+
+      const data = {
+        firstName: form.firstName.value,
+        lastName: form.lastName.value,
+        email: form.email.value,
+        subject: form.subject.value,
+        topic: form.topic.value,
+        message: form.message.value,
+        website: form.website.value
+      };
+
+      try {
+        const res = await fetch('https://cos-webhook.project-baseline.com/pb-contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+
+        if (result.success) {
+          status.style.color = '#22C55E';
+          status.textContent = 'Message sent successfully. We will be in touch soon.';
+          form.reset();
+        } else {
+          status.style.color = '#EF4444';
+          status.textContent = result.error || (result.errors ? result.errors.join(', ') : 'Something went wrong. Please try again.');
+        }
+      } catch (err) {
+        status.style.color = '#EF4444';
+        status.textContent = 'Unable to send. Please email info@project-baseline.com directly.';
+      }
+
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    }
   </script>
 
 </body>
