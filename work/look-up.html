@@ -7,24 +7,34 @@
   <meta name="description" content="How we supported Dr. Mae Jemison's Look Up! global engagement campaign, connecting people worldwide through the simple act of looking up.">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../work.html" class="active">Work</a>
-      <a href="../services.html">Services</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../contact.html" class="nav-cta">Start a Project</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../work.html" class="active">Work</a>
+        <div class="nav-dropdown">
+          <a href="../services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="../services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
+        <a href="../contact.html" class="nav-cta">Start a Project</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
 
   <main>
     <!-- Case Hero -->
-    <section class="case-hero" style="background:linear-gradient(135deg, #1A1A1A, #111);">
+    <section class="case-hero" style="background:url('../images/projects/look-up-web.png') center/cover no-repeat;">
       <div class="container">
         <div class="breadcrumb">
           <a href="../work.html">Work</a>
@@ -46,18 +56,18 @@
     <section class="case-body">
       <div class="container">
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE STORY</h2>
           <p>The story begins with a heartfelt discussion between Dr. Jill Tarter, co-founder of the SETI Institute, LeVar Burton and Dr. Mae Jemison at SXSW following their panel on 100 Year Starship. The topic? How to reconnect humans to space, to the Earth and the importance of audacious goals for the health of humanity. Initiated September 15, 2017 at the 25th Anniversary of Dr. Jemison's Spaceflight, LOOK UP! was established to connect people from all walks of life, across the world, on a single day by the simple act of sharing what they see when they LOOK UP.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE SOLUTION</h2>
           <p>We supported the development and implementation of an integrated brand strategy for Look Up!, a global engagement campaign which garnered support from celebrities and influencers around the world.</p>
         </div>
 
         <!-- Impact Box -->
-        <div class="case-impact">
+        <div class="case-impact reveal">
           <h3>IMPACT</h3>
           <div class="impact-grid">
             <div class="impact-item">
@@ -79,9 +89,12 @@
           </div>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>GLOBAL ENGAGEMENT CAMPAIGN</h2>
           <p>The campaign connected people from all walks of life, across the world, through the simple act of sharing what they see when they look up. Support from celebrities and influencers amplified the message to a massive global audience.</p>
+          <div style="margin-top:32px;text-align:center;">
+            <img src="../images/people/dr-mae.png" alt="Dr. Mae Jemison" loading="lazy" style="max-width:400px;border-radius:8px;">
+          </div>
         </div>
 
       </div>
@@ -101,13 +114,13 @@
     <div class="container">
       <div class="footer-content">
         <a href="../index.html" class="footer-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-        <div class="footer-nav">
+        <nav class="footer-nav">
           <a href="../index.html">Home</a>
           <a href="../about.html">About</a>
           <a href="../work.html">Work</a>
           <a href="../services.html">Services</a>
-          <a href="../contact.html">Contact</a>
-        </div>
+          <a href="../contact.html">Start a Project</a>
+        </nav>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Project Baseline. All rights reserved.</span>
@@ -116,11 +129,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  </script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

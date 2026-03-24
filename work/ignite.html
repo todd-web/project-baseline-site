@@ -7,24 +7,34 @@
   <meta name="description" content="How we developed multi-faceted strategic engagements between the US and South Africa, encompassing cultural exchange, brand development, and community initiatives.">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../work.html" class="active">Work</a>
-      <a href="../services.html">Services</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../contact.html" class="nav-cta">Start a Project</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../work.html" class="active">Work</a>
+        <div class="nav-dropdown">
+          <a href="../services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="../services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
+        <a href="../contact.html" class="nav-cta">Start a Project</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
 
   <main>
     <!-- Case Hero -->
-    <section class="case-hero" style="background:linear-gradient(135deg, #1A1A1A, #111);">
+    <section class="case-hero" style="background:url('../images/projects/sa-tews-banner.png') center/cover no-repeat;">
       <div class="container">
         <div class="breadcrumb">
           <a href="../work.html">Work</a>
@@ -46,17 +56,17 @@
     <section class="case-body">
       <div class="container">
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE STORY</h2>
           <p>Just one year after the tragic death of South Africa's iconic leader Nelson Mandela, the Office of the Consul General was planning the annual memorial celebration in Chicago. The city's long-lasting connection with the country of South Africa meant there were already deep relationships built within specific communities. Through involvement with this initiative, a spark was ignited and from there continued development of projects and relationships between the US and South Africa.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE SOLUTION</h2>
           <p>We developed a multi-faceted strategic engagement between the US and South Africa, encompassing cultural exchange, brand development, and community engagement initiatives.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>KEY PROJECTS</h2>
           <ul>
             <li>IGNITE Global Connection Series</li>
@@ -67,8 +77,17 @@
           </ul>
         </div>
 
+        <div class="case-section reveal">
+          <h2>GALLERY</h2>
+          <div class="case-gallery">
+            <img src="../images/projects/sa-tews-banner.png" alt="TEWS Space Race South Africa banner from Dorothy Jemison Foundation" loading="lazy">
+            <img src="../images/projects/south-africa/Beats Across Borders Event.jpg" alt="From The Roots launch event flyer" loading="lazy">
+            <img src="../images/projects/south-africa/Mandela Day - Chicago.jpg" alt="Mandela Day Celebration event flyer" loading="lazy">
+          </div>
+        </div>
+
         <!-- Impact Box -->
-        <div class="case-impact">
+        <div class="case-impact reveal">
           <h3>IMPACT</h3>
           <div class="impact-grid">
             <div class="impact-item">
@@ -107,13 +126,13 @@
     <div class="container">
       <div class="footer-content">
         <a href="../index.html" class="footer-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-        <div class="footer-nav">
+        <nav class="footer-nav">
           <a href="../index.html">Home</a>
           <a href="../about.html">About</a>
           <a href="../work.html">Work</a>
           <a href="../services.html">Services</a>
-          <a href="../contact.html">Contact</a>
-        </div>
+          <a href="../contact.html">Start a Project</a>
+        </nav>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Project Baseline. All rights reserved.</span>
@@ -122,11 +141,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  </script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

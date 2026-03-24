@@ -7,24 +7,34 @@
   <meta name="description" content="How we developed a strategic partnership between Lyft and SummertimeCHI.com to expand market share and build community relationships in Chicago.">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../work.html" class="active">Work</a>
-      <a href="../services.html">Services</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../contact.html" class="nav-cta">Start a Project</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../work.html" class="active">Work</a>
+        <div class="nav-dropdown">
+          <a href="../services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="../services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
+        <a href="../contact.html" class="nav-cta">Start a Project</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
 
   <main>
     <!-- Case Hero -->
-    <section class="case-hero" style="background:linear-gradient(135deg, #1A1A1A, #111);">
+    <section class="case-hero" style="background:#1A1A1A;">
       <div class="container">
         <div class="breadcrumb">
           <a href="../work.html">Work</a>
@@ -46,23 +56,31 @@
     <section class="case-body">
       <div class="container">
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE STORY</h2>
           <p>Lyft, a national rideshare transportation brand, was looking to expand market share in one of their leading markets, Chicago. They needed a strategy to reach key consumer targets, create engagement campaigns, and build relationships with the greater community.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE SOLUTION</h2>
           <p>We supported the development of a partnership with lifestyle brand SummertimeCHI.com to help reach key consumer targets and build community relationships. The campaign we delivered was entitled "Curators of Summer." We proposed an 8-month partnership engagement spanning from April to December 2016, with a specific focus on a series of ideas, concepts, and strategic plans to create engagement and value for both brands.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>ABOUT SUMMERTIMECHI.COM</h2>
           <p>SummertimeCHI.com is a digital lifestyle brand that captures the essence of this iconic Chicago experience through nightlife and events, fashion, culture, and exclusive experiences. It's about all access, all year round.</p>
         </div>
 
+        <div class="case-section reveal">
+          <h2>GALLERY</h2>
+          <div class="case-gallery">
+            <img src="../images/projects/summertimechi/STC device mock-up group.png" alt="SummertimeCHI multi-device website mockups" loading="lazy" style="background:#fff;padding:16px;border-radius:var(--radius);">
+            <img src="../images/projects/summertimechi/STC Banner 1.jpg" alt="SummertimeCHI popsicle and Sears Tower poster" loading="lazy">
+          </div>
+        </div>
+
         <!-- Impact Box -->
-        <div class="case-impact">
+        <div class="case-impact reveal">
           <h3>IMPACT</h3>
           <div class="impact-grid">
             <div class="impact-item">
@@ -101,13 +119,13 @@
     <div class="container">
       <div class="footer-content">
         <a href="../index.html" class="footer-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-        <div class="footer-nav">
+        <nav class="footer-nav">
           <a href="../index.html">Home</a>
           <a href="../about.html">About</a>
           <a href="../work.html">Work</a>
           <a href="../services.html">Services</a>
-          <a href="../contact.html">Contact</a>
-        </div>
+          <a href="../contact.html">Start a Project</a>
+        </nav>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Project Baseline. All rights reserved.</span>
@@ -116,11 +134,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  </script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

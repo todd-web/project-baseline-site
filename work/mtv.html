@@ -7,24 +7,34 @@
   <meta name="description" content="How we created the #WhatsYourDream initiative with MTV and Rainbow PUSH Coalition for the 50th anniversary of the March on Washington.">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../work.html" class="active">Work</a>
-      <a href="../services.html">Services</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../contact.html" class="nav-cta">Start a Project</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../work.html" class="active">Work</a>
+        <div class="nav-dropdown">
+          <a href="../services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="../services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
+        <a href="../contact.html" class="nav-cta">Start a Project</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
 
   <main>
     <!-- Case Hero -->
-    <section class="case-hero" style="background:linear-gradient(135deg, #1A1A1A, #111);">
+    <section class="case-hero" style="background:url('../images/projects/mtv-whatsyourdream-cover.jpg') center/cover no-repeat;">
       <div class="container">
         <div class="breadcrumb">
           <a href="../work.html">Work</a>
@@ -46,18 +56,27 @@
     <section class="case-body">
       <div class="container">
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE STORY</h2>
           <p>MTV, Rev. Jesse Jackson Sr., and the Rainbow PUSH Coalition were looking for a way to engage millennials with a digital activation and call-to-action that paid homage to Dr. Martin Luther King Jr.'s March on Washington. We created a solution that resulted in a collaboration with MTV's social enterprise arm MTV ACT to launch the #WhatsYourDream initiative.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE SOLUTION</h2>
           <p>The initiative successfully launched Wednesday August 28th, 2013, on the official 50th anniversary of the march, through two primary engagements: an open letter from Reverend Jesse L. Jackson Sr. and a social media/photo campaign around the #WhatsYourDream hashtag. The ultimate call to action was to have participants pledge to do their part to keep the dream alive by visiting YourDreamYourPledge.com.</p>
         </div>
 
+        <div class="case-section reveal">
+          <h2>CAMPAIGN MATERIALS</h2>
+          <div class="case-gallery">
+            <img src="../images/projects/mtv-whatsyourdream-p2.jpg" alt="WhatsYourDream media deck page 2" loading="lazy">
+            <img src="../images/projects/mtv-whatsyourdream-p3.jpg" alt="WhatsYourDream media deck page 3" loading="lazy">
+            <img src="../images/projects/mtv-whatsyourdream-p4.jpg" alt="WhatsYourDream media deck page 4" loading="lazy">
+          </div>
+        </div>
+
         <!-- Impact Box -->
-        <div class="case-impact">
+        <div class="case-impact reveal">
           <h3>IMPACT</h3>
           <div class="impact-grid">
             <div class="impact-item">
@@ -79,7 +98,7 @@
           </div>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>OPEN LETTER + DIGITAL CAMPAIGN</h2>
           <p>We released an open letter from Rev. Jesse L. Jackson highlighting the historical context of the March on Washington, and highlighted key celebrities and social activists for an online photo display campaign around the hashtag #WhatsYourDream.</p>
         </div>
@@ -101,13 +120,13 @@
     <div class="container">
       <div class="footer-content">
         <a href="../index.html" class="footer-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-        <div class="footer-nav">
+        <nav class="footer-nav">
           <a href="../index.html">Home</a>
           <a href="../about.html">About</a>
           <a href="../work.html">Work</a>
           <a href="../services.html">Services</a>
-          <a href="../contact.html">Contact</a>
-        </div>
+          <a href="../contact.html">Start a Project</a>
+        </nav>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Project Baseline. All rights reserved.</span>
@@ -116,11 +135,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  </script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

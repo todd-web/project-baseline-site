@@ -7,24 +7,34 @@
   <meta name="description" content="How we helped Complex Media launch their philanthropic initiative ComplexCommunity in Chicago, empowering future leaders and reinvesting in the city.">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
-  <nav class="nav">
-    <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="nav-links">
-      <a href="../index.html">Home</a>
-      <a href="../about.html">About</a>
-      <a href="../work.html" class="active">Work</a>
-      <a href="../services.html">Services</a>
-      <a href="../contact.html">Contact</a>
-      <a href="../contact.html" class="nav-cta">Start a Project</a>
-    </div>
-  </nav>
+  <header>
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../work.html" class="active">Work</a>
+        <div class="nav-dropdown">
+          <a href="../services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="../services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
+        <a href="../contact.html" class="nav-cta">Start a Project</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
 
   <main>
     <!-- Case Hero -->
-    <section class="case-hero" style="background:linear-gradient(135deg, #1A1A1A, #111);">
+    <section class="case-hero" style="background:url('../images/projects/complex-stat-page.jpg') center/cover no-repeat;">
       <div class="container">
         <div class="breadcrumb">
           <a href="../work.html">Work</a>
@@ -46,18 +56,29 @@
     <section class="case-body">
       <div class="container">
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE STORY</h2>
           <p>Understanding there's no better time to use their voice to not only entertain, but inspire social good, Complex was looking to launch their new initiative ComplexCommunity: a philanthropic endeavor producing collaborations that empower future leaders and provide much needed resources to cities that birthed Complex culture.</p>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>THE SOLUTION</h2>
           <p>Complex launched the initiative in Chicago during their first ever COMPLEX Community Week by teaming up with community members, athletes, artists, designers and chefs to work with local organizations and more to support underserved communities and reinvest in the city. We developed the strategic framework and managed the on-the-ground execution of this multi-day initiative.</p>
         </div>
 
+        <div class="case-section reveal">
+          <h2>GALLERY</h2>
+          <div class="case-gallery">
+            <img src="../images/projects/complex-panel.jpg" alt="Obama Foundation Leadership Panel at Complex Community Week" loading="lazy">
+            <img src="../images/projects/complex-mural.jpg" alt="Community mural installation, aerial view" loading="lazy">
+            <img src="../images/projects/complex-champion.jpg" alt="Champion store activation with Social Works merchandise" loading="lazy">
+            <img src="../images/projects/complex-group.jpg" alt="Youth community group photo" loading="lazy">
+            <img src="../images/projects/complex-dinner.jpg" alt="Community dinner with chefs and participants" loading="lazy">
+          </div>
+        </div>
+
         <!-- Impact Box -->
-        <div class="case-impact">
+        <div class="case-impact reveal">
           <h3>IMPACT</h3>
           <div class="impact-grid">
             <div class="impact-item">
@@ -75,7 +96,7 @@
           </div>
         </div>
 
-        <div class="case-section">
+        <div class="case-section reveal">
           <h2>COMMUNITY IMPACT</h2>
           <p>The initiative brought together local organizations, athletes, artists, designers and chefs in Chicago to work with local organizations to support underserved communities and reinvest in the city that helped birth Complex culture.</p>
         </div>
@@ -97,13 +118,13 @@
     <div class="container">
       <div class="footer-content">
         <a href="../index.html" class="footer-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-        <div class="footer-nav">
+        <nav class="footer-nav">
           <a href="../index.html">Home</a>
           <a href="../about.html">About</a>
           <a href="../work.html">Work</a>
           <a href="../services.html">Services</a>
-          <a href="../contact.html">Contact</a>
-        </div>
+          <a href="../contact.html">Start a Project</a>
+        </nav>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Project Baseline. All rights reserved.</span>
@@ -112,11 +133,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile nav toggle
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  </script>
+  <script src="../js/main.js"></script>
 </body>
 </html>

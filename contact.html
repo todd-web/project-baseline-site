@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get in touch with Project Baseline. Start a conversation about your project, brand development, or consulting needs.">
-  <title>Contact | Project Baseline</title>
+  <meta name="description" content="Start a project with Project Baseline. Strategic consulting, brand development, and innovation solutions.">
+  <title>Start a Project | Project Baseline</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
   <header>
     <nav class="nav">
       <a href="index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
@@ -18,37 +18,37 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html" class="active">Contact</a>
-        <a href="contact.html" class="nav-cta">Start a Project</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-cta active">Start a Project</a>
       </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
   <main>
 
-    <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="container">
-        <h1>GET IN <span class="accent">TOUCH</span></h1>
-        <p>Start a conversation about your project. No commitment, no pressure.</p>
+        <h1 class="hero-animate">START A <span class="accent">PROJECT</span></h1>
+        <p class="hero-animate hero-animate-delay-1">Tell us about your goals. No commitment, no pressure.</p>
       </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
     <section class="section">
       <div class="container">
         <div class="contact-grid">
 
-          <!-- Left Column -->
-          <div class="contact-info">
+          <div class="contact-info reveal-left">
             <h3>LET'S WORK TOGETHER</h3>
-            <p>Whether you have a specific project in mind or just want to explore possibilities, we'd love to hear from you. Reach out and let's start a conversation.</p>
+            <p>Whether you have a specific project in mind or just want to explore possibilities, we'd love to hear from you. Every great engagement starts with a conversation.</p>
 
             <div class="contact-detail">
               <div class="icon">&#9993;</div>
@@ -75,8 +75,7 @@
             </div>
           </div>
 
-          <!-- Right Column -->
-          <div class="contact-form">
+          <div class="contact-form reveal-right">
             <form id="pb-contact-form" onsubmit="return submitContactForm(event)">
 
               <div class="form-row">
@@ -114,7 +113,7 @@
                 </select>
               </div>
 
-              <!-- Honeypot - hidden from humans, bots fill it -->
+              <!-- Honeypot -->
               <div style="position:absolute;left:-9999px;"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
 
               <div class="form-group">
@@ -132,31 +131,8 @@
       </div>
     </section>
 
-    <!-- ===== SUBSIDIARY LINKS ===== -->
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-header">
-          <span class="label">Specialized Consulting</span>
-          <h2>LOOKING FOR SOMETHING SPECIFIC?</h2>
-        </div>
-        <div class="subsidiary-grid">
-          <div class="subsidiary-card">
-            <h3>NONPROFIT CONSULTING</h3>
-            <p>Strategic consulting, grant writing, and organizational development.</p>
-            <a href="https://nonprofit.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Visit Platform &#8594;</a>
-          </div>
-          <div class="subsidiary-card">
-            <h3>AI IMPLEMENTATION</h3>
-            <p>AI strategy, workflow automation, and implementation consulting.</p>
-            <a href="https://ai.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Visit Platform &#8594;</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -166,7 +142,7 @@
           <a href="about.html">About</a>
           <a href="work.html">Work</a>
           <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Start a Project</a>
         </nav>
       </div>
       <div class="footer-bottom">
@@ -176,30 +152,20 @@
     </div>
   </footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
+  <script src="js/main.js"></script>
   <script>
-    (function() {
-      var toggle = document.querySelector('.nav-toggle');
-      var links = document.querySelector('.nav-links');
-      if (toggle && links) {
-        toggle.addEventListener('click', function() {
-          links.classList.toggle('open');
-        });
-      }
-    })();
-
     async function submitContactForm(e) {
       e.preventDefault();
-      const btn = document.getElementById('submit-btn');
-      const status = document.getElementById('form-status');
-      const form = document.getElementById('pb-contact-form');
+      var btn = document.getElementById('submit-btn');
+      var status = document.getElementById('form-status');
+      var form = document.getElementById('pb-contact-form');
 
       btn.disabled = true;
       btn.textContent = 'Sending...';
       status.textContent = '';
       status.style.color = '';
 
-      const data = {
+      var data = {
         firstName: form.firstName.value,
         lastName: form.lastName.value,
         email: form.email.value,
@@ -210,12 +176,12 @@
       };
 
       try {
-        const res = await fetch('https://cos-webhook.project-baseline.com/pb-contact', {
+        var res = await fetch('https://cos-webhook.project-baseline.com/pb-contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
         });
-        const result = await res.json();
+        var result = await res.json();
 
         if (result.success) {
           status.style.color = '#22C55E';

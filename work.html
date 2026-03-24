@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Case studies and selected work from Project Baseline. Campaign strategy, brand development, and experiential solutions for organizations creating real impact.">
+  <meta name="description" content="Case studies and selected work from Project Baseline. 13 campaigns spanning brand strategy, global engagement, social impact, and innovation consulting.">
   <title>Our Work | Project Baseline</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION ===== -->
   <header>
     <nav class="nav">
       <a href="index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
@@ -18,142 +18,272 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="work.html" class="active">Work</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-cta">Start a Project</a>
       </div>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
     </nav>
   </header>
 
   <main>
 
-    <!-- ===== PAGE HERO ===== -->
     <section class="page-hero">
       <div class="container">
-        <h1>OUR <span class="accent">WORK</span></h1>
-        <p>Campaign strategy, brand development, and experiential solutions for organizations creating real impact.</p>
+        <h1 class="hero-animate">OUR <span class="accent">WORK</span></h1>
+        <p class="hero-animate hero-animate-delay-1">13 campaigns spanning brand strategy, global engagement, social impact, and innovation consulting.</p>
       </div>
     </section>
 
-    <!-- ===== CASE STUDIES GRID ===== -->
-    <section class="section section-dark">
+    <!-- Stats -->
+    <section class="section-dark" style="padding:0;">
       <div class="container">
+        <div class="stats-bar">
+          <div class="stat-item reveal stagger-1">
+            <div class="counter-value" data-count="25" data-suffix="B+">0B+</div>
+            <div class="stat-label">Total Impressions</div>
+          </div>
+          <div class="stat-item reveal stagger-2">
+            <div class="counter-value" data-count="13" data-suffix="">0</div>
+            <div class="stat-label">Case Studies</div>
+          </div>
+          <div class="stat-item reveal stagger-3">
+            <div class="counter-value" data-count="18" data-suffix="+">0+</div>
+            <div class="stat-label">Years</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies Grid -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="brand-strategy">Brand Strategy</button>
+          <button class="filter-btn" data-filter="social-impact">Social Impact</button>
+          <button class="filter-btn" data-filter="international">International</button>
+          <button class="filter-btn" data-filter="event-production">Event Production</button>
+          <button class="filter-btn" data-filter="digital-marketing">Digital / Marketing</button>
+          <button class="filter-btn" data-filter="entertainment">Entertainment</button>
+        </div>
+
         <div class="work-grid">
 
-          <!-- Complex Community Week -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
+          <!-- 1. Complex Community Week -->
+          <div class="work-card reveal stagger-1" data-category="brand-strategy event-production">
+            <div class="work-card-img">
+              <img src="images/projects/complex-stat-page.jpg" alt="Complex Community Week Statistics" loading="lazy">
+            </div>
             <div class="work-card-body">
               <div class="work-card-tags">
                 <span class="work-tag">Brand Strategy</span>
                 <span class="work-tag">Experiential</span>
               </div>
               <h3>COMPLEX COMMUNITY WEEK</h3>
-              <p>Complex's philanthropic initiative producing collaborations that empower future leaders and provide resources to communities that birthed Complex culture. Launched in Chicago with community members, athletes, artists, designers, and chefs.</p>
+              <p>Launching Complex Media's philanthropic initiative in Chicago with athletes, artists, designers and chefs to reinvest in the city.</p>
               <a href="work/complex-community.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
-          <!-- Look Up! -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
+          <!-- 2. Nexus Nairobi -->
+          <div class="work-card reveal stagger-2" data-category="international event-production">
+            <div class="work-card-img">
+              <img src="images/projects/nexus-nairobi.jpg" alt="Nexus Nairobi 2023" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">International</span>
+                <span class="work-tag">Event Production</span>
+              </div>
+              <h3>NEXUS NAIROBI</h3>
+              <p>International gathering of 1,500+ participants from 50+ countries, powered by Dr. Mae Jemison's 100 Year Starship initiative.</p>
+              <a href="work/nexus-nairobi.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- 3. Find Where The Wind Goes -->
+          <div class="work-card reveal stagger-1" data-category="digital-marketing brand-strategy">
+            <div class="work-card-img" style="background:#0A1628;">
+              <img src="images/projects/fwtwg-banner.png" alt="Find Where The Wind Goes" loading="lazy" style="object-fit:contain;object-position:right center;">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">Publishing</span>
+                <span class="work-tag">Digital Marketing</span>
+              </div>
+              <h3>FIND WHERE THE WIND GOES</h3>
+              <p>Publishing strategy and community outreach for Dr. Mae Jemison's memoir, reaching 20,000+ young readers and earning NPR and New York Times features.</p>
+              <a href="work/find-where-the-wind-goes.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- 4. Rainbow PUSH + Chevrolet "Money Matters" -->
+          <div class="work-card reveal stagger-2" data-category="social-impact brand-strategy">
+            <div class="work-card-img">
+              <img src="images/projects/money-matters-event.jpg" alt="Rainbow PUSH Money Matters Event" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">Social Impact</span>
+                <span class="work-tag">Brand Partnership</span>
+              </div>
+              <h3>RAINBOW PUSH + CHEVROLET "MONEY MATTERS"</h3>
+              <p>Financial literacy initiative connecting Chevrolet's brand with Rainbow PUSH's community reach, educating 1,000+ participants nationally.</p>
+              <a href="work/rainbow-push-chevrolet.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- 5. Rainbow PUSH Organizational Support -->
+          <div class="work-card reveal stagger-1" data-category="event-production social-impact">
+            <div class="work-card-img">
+              <img src="images/projects/push-awards-gala.jpg" alt="Rainbow PUSH Awards Gala" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">Event Production</span>
+                <span class="work-tag">Organizational Strategy</span>
+              </div>
+              <h3>RAINBOW PUSH ORGANIZATIONAL SUPPORT</h3>
+              <p>Strategic production support for Rainbow PUSH's Annual International Convention, Awards Gala, and entertainment projects.</p>
+              <a href="work/rainbow-push-org.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- 6. Look Up! Global Campaign -->
+          <div class="work-card reveal stagger-2" data-category="digital-marketing international">
+            <div class="work-card-img">
+              <img src="images/projects/look-up-web.png" alt="Look Up! Global Campaign Website" loading="lazy">
+            </div>
             <div class="work-card-body">
               <div class="work-card-tags">
                 <span class="work-tag">Global Campaign</span>
                 <span class="work-tag">Digital</span>
               </div>
               <h3>LOOK UP! GLOBAL CAMPAIGN</h3>
-              <p>Supporting the development of an integrated brand strategy for Dr. Mae Jemison's global engagement campaign. A single-day initiative connecting people worldwide that garnered 100 million impressions.</p>
+              <p>Supporting Dr. Mae Jemison's global engagement campaign that garnered 100 million impressions in a single day.</p>
               <a href="work/look-up.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
-          <!-- Nielsen -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
+          <!-- 7. MTV + Rainbow PUSH -->
+          <div class="work-card reveal stagger-1" data-category="social-impact digital-marketing">
+            <div class="work-card-img">
+              <img src="images/projects/mtv-whatsyourdream-cover.jpg" alt="MTV WhatsYourDream Campaign" loading="lazy">
+            </div>
             <div class="work-card-body">
               <div class="work-card-tags">
-                <span class="work-tag">National Campaign</span>
+                <span class="work-tag">Social Impact</span>
                 <span class="work-tag">Digital</span>
               </div>
-              <h3>NIELSEN + BLACK GIRL MAGIC</h3>
-              <p>Developing concepts and creative campaign assets for Nielsen's 2017 DIS African-American Consumer Report. A cross-platform, media-rich national digital campaign with a coordinated $350,000 media spend across three major markets.</p>
-              <a href="work/nielsen.html" class="card-link">View Case Study &#8594;</a>
+              <h3>MTV + RAINBOW PUSH</h3>
+              <p>Digital activation for the 50th anniversary of the March on Washington. 50+ million impressions through the #WhatsYourDream initiative with MTV ACT.</p>
+              <a href="work/mtv.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
-          <!-- Lyft x SummertimeCHI -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
+          <!-- 8. TEDxChicago -->
+          <div class="work-card reveal stagger-2" data-category="event-production">
+            <div class="work-card-img" style="background:linear-gradient(135deg,#E62B1E,#1A1A1A);display:flex;align-items:center;justify-content:center;">
+              <img src="images/logos/tedxchicago.png" alt="TEDxChicago" loading="lazy" style="width:50%;height:auto;object-fit:contain;">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">Event Production</span>
+                <span class="work-tag">Curation</span>
+              </div>
+              <h3>TEDXCHICAGO</h3>
+              <p>Lead Performance Curator. Produced two major events with 1,500+ attendees, managing speaker coordination, logistics, and promotional strategy.</p>
+              <a href="work/tedxchicago.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- 9. Lyft + SummertimeCHI -->
+          <div class="work-card reveal stagger-1" data-category="brand-strategy event-production">
+            <div class="work-card-img" style="background:#fff;">
+              <img src="images/projects/summertimechi/STC device mock-up group.png" alt="SummertimeCHI Multi-Device" loading="lazy">
+            </div>
             <div class="work-card-body">
               <div class="work-card-tags">
                 <span class="work-tag">Partnership</span>
                 <span class="work-tag">Experiential</span>
               </div>
               <h3>LYFT + SUMMERTIMECHI.COM</h3>
-              <p>Developing a strategic partnership between Lyft and lifestyle brand SummertimeCHI.com to reach key consumer targets and build community relationships through the 'Curators of Summer' campaign.</p>
+              <p>Strategic partnership development between Lyft and lifestyle brand SummertimeCHI.com through the "Curators of Summer" campaign.</p>
               <a href="work/lyft.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
-          <!-- MTV x Rainbow PUSH -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
+          <!-- 10. Donda's House / Art of Culture -->
+          <div class="work-card reveal stagger-2" data-category="social-impact entertainment">
+            <div class="work-card-img">
+              <img src="images/projects/dondas-house/Write for Rights Cover.jpg" alt="Donda's House Write for Rights" loading="lazy">
+            </div>
             <div class="work-card-body">
               <div class="work-card-tags">
-                <span class="work-tag">Social Impact</span>
-                <span class="work-tag">Digital</span>
+                <span class="work-tag">Board Leadership</span>
+                <span class="work-tag">Nonprofit</span>
               </div>
-              <h3>MTV + RAINBOW PUSH COALITION</h3>
-              <p>Creating the #WhatsYourDream initiative for the 50th anniversary of the March on Washington, in collaboration with Rev. Jesse Jackson Sr. and MTV ACT. Generated more than 50 million impressions.</p>
-              <a href="work/mtv.html" class="card-link">View Case Study &#8594;</a>
+              <h3>DONDA'S HOUSE / ART OF CULTURE</h3>
+              <p>Board of Directors, Communications Chair. Engaged 1,000+ youth in arts programs, raised over $1M in funding through grants, donations, and sponsorships.</p>
+              <a href="work/dondas-house.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
-          <!-- IGNITE - South Africa -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
+          <!-- 11. South African Engagement -->
+          <div class="work-card reveal stagger-1" data-category="international brand-strategy">
+            <div class="work-card-img">
+              <img src="images/projects/sa-tews-banner.png" alt="TEWS South Africa" loading="lazy">
+            </div>
             <div class="work-card-body">
               <div class="work-card-tags">
                 <span class="work-tag">International</span>
                 <span class="work-tag">Market Entry</span>
               </div>
-              <h3>SOUTH AFRICAN STRATEGIC ENGAGEMENT</h3>
-              <p>Developing projects and relationships between the US and South Africa, including the IGNITE Global Connection Series, cultural exchange programs, and South African Consulate community engagement initiatives.</p>
+              <h3>SOUTH AFRICAN ENGAGEMENT</h3>
+              <p>10+ cultural and business exchange events, 5MM impressions, partnerships with the South African General Consulate in Chicago.</p>
               <a href="work/ignite.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
-          <!-- Jay Electronica / RocNation -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
-            <div class="work-card-body">
-              <div class="work-card-tags">
-                <span class="work-tag">Entertainment</span>
-                <span class="work-tag">Brand Strategy</span>
-              </div>
-              <h3>JAY ELECTRONICA (ROCNATION)</h3>
-              <p>Collaborating to create branding and marketing opportunities for RocNation artist Jay Electronica during the Nobody's Smiling Tour with COMMON, packaged into a creative format to secure partnerships and sponsorships.</p>
-              <a href="work/rocnation.html" class="card-link">View Case Study &#8594;</a>
+          <!-- 12. Brioxy White House Summit -->
+          <div class="work-card reveal stagger-2" data-category="social-impact event-production">
+            <div class="work-card-img">
+              <img src="images/projects/brioxy-one-sheet.jpg" alt="Brioxy Life Summit One-Sheet" loading="lazy">
             </div>
-          </div>
-
-          <!-- Brioxy White House Summit -->
-          <div class="work-card">
-            <div style="width:100%;height:220px;background:linear-gradient(135deg,#2A2A2A,#1A1A1A);"></div>
             <div class="work-card-body">
               <div class="work-card-tags">
                 <span class="work-tag">Social Impact</span>
                 <span class="work-tag">Convening</span>
               </div>
               <h3>BRIOXY WHITE HOUSE SUMMIT</h3>
-              <p>The inaugural Brioxy convened the country's top millennial innovators of color to build infrastructure for investing in young leaders. Including two days at a local venue plus one day inside the White House.</p>
+              <p>The inaugural Brioxy convened the country's top millennial innovators of color, including two days at a local venue plus one day inside the White House.</p>
               <a href="work/brioxy.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- 13. Jay Electronica (RocNation) -->
+          <div class="work-card reveal stagger-1" data-category="entertainment brand-strategy">
+            <div class="work-card-img">
+              <img src="images/projects/je-concert.jpg" alt="Jay Electronica Concert" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">Entertainment</span>
+                <span class="work-tag">Brand Strategy</span>
+              </div>
+              <h3>JAY ELECTRONICA (ROCNATION)</h3>
+              <p>Branding and marketing strategy for the Nobody's Smiling Tour with COMMON, packaged to secure partnerships and sponsorships.</p>
+              <a href="work/rocnation.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
@@ -161,18 +291,17 @@
       </div>
     </section>
 
-    <!-- ===== CTA ===== -->
+    <!-- CTA -->
     <section class="cta-section">
-      <div class="container">
+      <div class="container reveal">
         <h2>HAVE A PROJECT IN MIND?</h2>
         <p>Let's talk about how we can create impact together.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Start a Conversation</a>
+        <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
@@ -182,7 +311,7 @@
           <a href="about.html">About</a>
           <a href="work.html">Work</a>
           <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Start a Project</a>
         </nav>
       </div>
       <div class="footer-bottom">
@@ -192,18 +321,7 @@
     </div>
   </footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
-  <script>
-    (function() {
-      var toggle = document.querySelector('.nav-toggle');
-      var links = document.querySelector('.nav-links');
-      if (toggle && links) {
-        toggle.addEventListener('click', function() {
-          links.classList.toggle('open');
-        });
-      }
-    })();
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

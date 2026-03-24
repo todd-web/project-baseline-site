@@ -3,23 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project Baseline is a strategic consulting firm delivering full-circle solutions in brand development, project management, innovation, and social enterprise.">
+  <meta name="description" content="Project Baseline is a strategic consulting firm delivering full-circle solutions in brand development, project management, innovation, and social enterprise. Over 25 billion impressions generated across 13 campaigns.">
   <title>Project Baseline | Strategic Consulting</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
   <!-- ===== NAVIGATION ===== -->
   <header>
     <nav class="nav">
-      <a href="/" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <a href="index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
         <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
+        </div>
         <a href="contact.html" class="nav-cta">Start a Project</a>
       </div>
       <button class="nav-toggle" aria-label="Toggle navigation">
@@ -36,12 +44,12 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <span class="hero-label">Strategic Consulting</span>
-          <h1>REALIZE THE <span class="accent">VALUE</span> OF INNOVATIVE THINKING.</h1>
-          <p>Full-circle solutions from one source. We use innovative strategies to develop and manage projects to their fullest potential, helping individuals and organizations succeed without sacrificing their identities.</p>
-          <div class="hero-btns">
+          <span class="hero-label hero-animate">Strategic Consulting</span>
+          <h1 class="hero-animate hero-animate-delay-1">REALIZE THE <span class="accent">VALUE</span> OF INNOVATIVE THINKING.</h1>
+          <p class="hero-animate hero-animate-delay-2">Two decades of impact across brand strategy, experiential marketing, innovation consulting, and social enterprise. We build with purpose, cultural fluency, and the kind of relationships that make work last.</p>
+          <div class="hero-btns hero-animate hero-animate-delay-3">
             <a href="work.html" class="btn btn-primary btn-lg">View Our Work</a>
-            <a href="contact.html" class="btn btn-outline-light btn-lg">Start a Conversation</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg">Start a Project</a>
           </div>
         </div>
       </div>
@@ -51,155 +59,74 @@
     <section class="section-dark" style="padding: 0;">
       <div class="container">
         <div class="stats-bar">
-          <div class="stat-item">
-            <div class="stat-value">18+</div>
+          <div class="stat-item reveal stagger-1">
+            <div class="counter-value" data-count="18" data-suffix="+">0+</div>
             <div class="stat-label">Years of Experience</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value">8</div>
+          <div class="stat-item reveal stagger-2">
+            <div class="counter-value" data-count="13" data-suffix="">0</div>
             <div class="stat-label">Major Campaigns</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value">150M+</div>
+          <div class="stat-item reveal stagger-3">
+            <div class="counter-value" data-count="25" data-suffix="B+">0B+</div>
             <div class="stat-label">Impressions Generated</div>
           </div>
-          <div class="stat-item">
-            <div class="stat-value">$350K+</div>
-            <div class="stat-label">Media Budgets Managed</div>
+          <div class="stat-item reveal stagger-4">
+            <div class="counter-value" data-count="50" data-suffix="+">0+</div>
+            <div class="stat-label">Countries Reached</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===== SERVICES ===== -->
-    <section class="section section-gray">
+    <section class="section section-compact section-gray">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="label">What We Do</span>
           <h2>STRATEGIC SERVICES</h2>
-          <p>From brand development to global campaigns, we deliver full-circle solutions that create lasting impact.</p>
+          <p>Full-circle solutions from one source. Strategy, execution, and long-term partnership.</p>
         </div>
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service-card reveal stagger-1">
             <div class="service-icon">&#9881;</div>
             <h3>PROJECT MANAGEMENT</h3>
-            <p>Specializing in marketing, social enterprise, and program development. We use knowledge, research, and experience to ensure projects have appropriate budgets, timelines, and identified goals.</p>
+            <p>Marketing, social enterprise, and program development with disciplined budgets, timelines, and clear goals.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card reveal stagger-2">
             <div class="service-icon">&#9830;</div>
             <h3>BRAND DEVELOPMENT</h3>
-            <p>We help clients find their voice, strengthen it in the marketplace, and better manage their image. The stronger the brand, the stronger its audience.</p>
+            <p>Finding your voice, strengthening it in the marketplace, and building an audience that stays.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card reveal stagger-3">
             <div class="service-icon">&#9889;</div>
             <h3>INNOVATION &amp; IDEATION</h3>
-            <p>Helping brands break through roadblocks and formulate action plans for future growth through inventive branding strategies and technology integration.</p>
+            <p>Breaking through roadblocks with inventive branding strategies and technology integration.</p>
           </div>
-          <div class="service-card">
+          <div class="service-card reveal stagger-4">
             <div class="service-icon">&#9733;</div>
             <h3>SOCIAL ENTERPRISE</h3>
-            <p>We develop innovative strategies to reach our clients' goals while enhancing human and environmental well-being through digital and experiential campaigns.</p>
+            <p>Digital and experiential campaigns that reach business goals while creating meaningful change.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FEATURED WORK ===== -->
+    <!-- ===== SPECIALIZED CONSULTING (moved up per feedback item #4) ===== -->
     <section class="section section-dark">
       <div class="container">
-        <div class="section-header">
-          <span class="label">Selected Work</span>
-          <h2>PROJECTS THAT MOVE THE NEEDLE</h2>
-          <p>Campaign strategy, brand development, and experiential solutions for organizations that want to create real impact.</p>
-        </div>
-        <div class="work-grid">
-
-          <!-- Complex Community Week -->
-          <div class="work-card">
-            <div class="work-card-image-placeholder" style="width: 100%; height: 220px; background: #2A2A2A; border-radius: 0;"></div>
-            <div class="work-card-body">
-              <div class="work-card-tags">
-                <span class="work-tag">Brand Strategy</span>
-                <span class="work-tag">Experiential</span>
-              </div>
-              <h3>COMPLEX COMMUNITY WEEK</h3>
-              <p>Complex's philanthropic initiative producing collaborations that empower future leaders and provide resources to communities that birthed Complex culture.</p>
-              <a href="work/complex-community.html" class="card-link">View Case Study &#8594;</a>
-            </div>
-          </div>
-
-          <!-- Look Up! -->
-          <div class="work-card">
-            <div class="work-card-image-placeholder" style="width: 100%; height: 220px; background: #2A2A2A; border-radius: 0;"></div>
-            <div class="work-card-body">
-              <div class="work-card-tags">
-                <span class="work-tag">Global Campaign</span>
-                <span class="work-tag">Digital</span>
-              </div>
-              <h3>LOOK UP! GLOBAL CAMPAIGN</h3>
-              <p>Supporting the development of an integrated brand strategy for Dr. Mae Jemison's global engagement campaign, garnering 100 million impressions in a single day.</p>
-              <a href="work/look-up.html" class="card-link">View Case Study &#8594;</a>
-            </div>
-          </div>
-
-          <!-- Nielsen -->
-          <div class="work-card">
-            <div class="work-card-image-placeholder" style="width: 100%; height: 220px; background: #2A2A2A; border-radius: 0;"></div>
-            <div class="work-card-body">
-              <div class="work-card-tags">
-                <span class="work-tag">National Campaign</span>
-                <span class="work-tag">Digital</span>
-              </div>
-              <h3>NIELSEN + BLACK GIRL MAGIC</h3>
-              <p>Developing concepts and creative campaign assets for a cross-platform, media-rich national digital campaign with a coordinated $350,000 media spend.</p>
-              <a href="work/nielsen.html" class="card-link">View Case Study &#8594;</a>
-            </div>
-          </div>
-
-          <!-- MTV -->
-          <div class="work-card">
-            <div class="work-card-image-placeholder" style="width: 100%; height: 220px; background: #2A2A2A; border-radius: 0;"></div>
-            <div class="work-card-body">
-              <div class="work-card-tags">
-                <span class="work-tag">Social Impact</span>
-                <span class="work-tag">Digital</span>
-              </div>
-              <h3>MTV + RAINBOW PUSH COALITION</h3>
-              <p>Creating the #WhatsYourDream initiative on the 50th anniversary of the March on Washington, generating more than 50 million impressions.</p>
-              <a href="work/mtv.html" class="card-link">View Case Study &#8594;</a>
-            </div>
-          </div>
-
-        </div>
-        <div style="text-align: center; margin-top: 48px;">
-          <a href="work.html" class="btn btn-outline-light">View All Projects &#8594;</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== QUOTE BLOCK ===== -->
-    <section class="section">
-      <div class="quote-block">
-        <blockquote>The keys to <span class="highlight">CREATING INCREDIBLE EXPERIENCES</span> are a disciplined process and a disruptive mindset.</blockquote>
-        <cite>PROJECT BASELINE PHILOSOPHY</cite>
-      </div>
-    </section>
-
-    <!-- ===== SUBSIDIARY PLATFORMS ===== -->
-    <section class="section section-dark">
-      <div class="container">
-        <div class="section-header">
+        <div class="section-header reveal">
           <span class="label">Platforms</span>
           <h2>SPECIALIZED CONSULTING</h2>
           <p>Purpose-built platforms for focused engagements.</p>
         </div>
         <div class="subsidiary-grid">
-          <div class="subsidiary-card">
+          <div class="subsidiary-card reveal stagger-1">
             <h3>NONPROFIT CONSULTING</h3>
             <p>Strategic consulting, grant writing, and organizational development for nonprofits. Full client portal with project tracking and deliverable management.</p>
             <a href="https://nonprofit.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Visit Platform &#8594;</a>
           </div>
-          <div class="subsidiary-card">
+          <div class="subsidiary-card reveal stagger-2">
             <h3>AI IMPLEMENTATION</h3>
             <p>AI strategy, workflow automation, and implementation consulting for organizations ready to leverage artificial intelligence practically and effectively.</p>
             <a href="https://ai.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Visit Platform &#8594;</a>
@@ -208,12 +135,103 @@
       </div>
     </section>
 
+    <!-- ===== FEATURED WORK (3 cards with images per feedback) ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Selected Work</span>
+          <h2>PROJECTS THAT MOVE THE NEEDLE</h2>
+          <p>Campaign strategy, brand development, and experiential solutions for organizations creating real impact.</p>
+        </div>
+        <div class="work-grid">
+
+          <!-- Nexus Nairobi -->
+          <div class="work-card reveal stagger-1">
+            <div class="work-card-img">
+              <img src="images/projects/nexus-nairobi.jpg" alt="Nexus Nairobi 2023" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">International</span>
+                <span class="work-tag">Event Production</span>
+              </div>
+              <h3>NEXUS NAIROBI</h3>
+              <p>International gathering of 1,500+ participants from 50+ countries, powered by Dr. Mae Jemison's 100 Year Starship initiative.</p>
+              <a href="work/nexus-nairobi.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Rainbow PUSH + Chevrolet -->
+          <div class="work-card reveal stagger-2">
+            <div class="work-card-img">
+              <img src="images/projects/money-matters-event.jpg" alt="Rainbow PUSH Money Matters Event" loading="lazy">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">Social Impact</span>
+                <span class="work-tag">Brand Partnership</span>
+              </div>
+              <h3>RAINBOW PUSH + CHEVROLET</h3>
+              <p>Financial literacy initiative connecting Chevrolet's brand with Rainbow PUSH's community reach, educating 1,000+ participants nationally.</p>
+              <a href="work/rainbow-push-chevrolet.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Find Where The Wind Goes -->
+          <div class="work-card reveal stagger-3">
+            <div class="work-card-img" style="background:#0A1628;">
+              <img src="images/projects/fwtwg-banner.png" alt="Find Where The Wind Goes" loading="lazy" style="object-fit:contain;object-position:right center;">
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">Publishing</span>
+                <span class="work-tag">Digital Marketing</span>
+              </div>
+              <h3>FIND WHERE THE WIND GOES</h3>
+              <p>Publishing strategy and community outreach for Dr. Mae Jemison's memoir, reaching 20,000+ young readers and earning NPR and New York Times features.</p>
+              <a href="work/find-where-the-wind-goes.html" class="card-link">View Case Study &#8594;</a>
+            </div>
+          </div>
+
+        </div>
+        <div style="text-align: center; margin-top: 48px;" class="reveal">
+          <a href="work.html" class="btn btn-outline-dark">View All Projects &#8594;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLIENT LOGOS ===== -->
+    <section class="section-compact section-gray" style="padding: 48px 0;">
+      <div class="container">
+        <div class="client-logos reveal">
+          <img src="images/logos/complex.png" alt="Complex" loading="lazy">
+          <img src="images/logos/mtv.png" alt="MTV" loading="lazy">
+          <img src="images/logos/rainbow-push.png" alt="Rainbow PUSH Coalition" loading="lazy">
+          <img src="images/logos/pg.png" alt="Procter &amp; Gamble" loading="lazy">
+          <img src="images/logos/lyft.png" alt="Lyft" loading="lazy">
+          <img src="images/logos/tedxchicago.png" alt="TEDxChicago" loading="lazy">
+          <img src="images/logos/mae-jemison.png" alt="The Jemison Group" loading="lazy">
+          <img src="images/logos/art-institute.png" alt="Art Institute of Chicago" loading="lazy">
+          <img src="images/logos/brioxy.png" alt="Brioxy" loading="lazy">
+          <img src="images/logos/white-house.png" alt="The White House" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUOTE BLOCK ===== -->
+    <section class="section-compact">
+      <div class="quote-block reveal">
+        <blockquote>The keys to <span class="highlight">CREATING INCREDIBLE EXPERIENCES</span> are a disciplined process and a disruptive mindset.</blockquote>
+        <cite>PROJECT BASELINE PHILOSOPHY</cite>
+      </div>
+    </section>
+
     <!-- ===== CTA ===== -->
     <section class="cta-section">
-      <div class="container">
+      <div class="container reveal">
         <h2>LET'S BUILD SOMETHING TOGETHER</h2>
         <p>No commitment, no pressure. Just a conversation about your goals and how we can help.</p>
-        <a href="contact.html" class="btn btn-primary btn-lg">Start a Conversation</a>
+        <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
       </div>
     </section>
 
@@ -229,7 +247,7 @@
           <a href="about.html">About</a>
           <a href="work.html">Work</a>
           <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Start a Project</a>
         </nav>
       </div>
       <div class="footer-bottom">
@@ -239,33 +257,7 @@
     </div>
   </footer>
 
-  <!-- ===== JAVASCRIPT ===== -->
-  <script>
-    // Mobile nav toggle
-    (function() {
-      var toggle = document.querySelector('.nav-toggle');
-      var links = document.querySelector('.nav-links');
-      if (toggle && links) {
-        toggle.addEventListener('click', function() {
-          links.classList.toggle('open');
-        });
-      }
-    })();
-
-    // Active nav link highlighting
-    (function() {
-      var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      var navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
-      navLinks.forEach(function(link) {
-        var href = link.getAttribute('href');
-        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-          link.classList.add('active');
-        } else {
-          link.classList.remove('active');
-        }
-      });
-    })();
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>

@@ -3,149 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Project Baseline. Strategic consulting built on innovation, cultural intelligence, and two decades of results.">
+  <meta name="description" content="About Project Baseline. Strategic consulting built on innovation, cultural intelligence, and two decades of results across brand development, global campaigns, and social enterprise.">
   <title>About | Project Baseline</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
 
-  <nav class="nav">
-    <a href="index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
-      <a href="work.html">Work</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
-      <a href="contact.html" class="nav-cta">Start a Project</a>
-    </div>
-  </nav>
-
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>ABOUT <span class="accent">PROJECT BASELINE</span></h1>
-      <p>Strategic consulting built on innovation, cultural intelligence, and two decades of results.</p>
-    </div>
-  </section>
-
-  <!-- About Intro -->
-  <section class="section">
-    <div class="container">
-      <div class="about-intro">
-        <div>
-          <h2>FULL-CIRCLE SOLUTIONS FROM ONE SOURCE</h2>
-          <p>Project Baseline was founded in 2007, taking an innovative approach to project management, consultation, brand building, and social enterprise.</p>
-          <p>We use innovative intrapersonal techniques to develop and manage projects to their fullest potential, helping individuals and organizations to succeed without sacrificing their identities.</p>
-          <p>From national digital campaigns to global engagement initiatives, our work spans brand strategy, experiential marketing, social impact, and innovation consulting. We bring a combination of cultural fluency, strategic discipline, and creative thinking to every engagement.</p>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="work.html">Work</a>
+        <div class="nav-dropdown">
+          <a href="services.html">Services</a>
+          <div class="dropdown-menu">
+            <a href="services.html">All Services</a>
+            <div class="dropdown-divider"></div>
+            <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+          </div>
         </div>
-        <div class="about-image">
-          <div style="background: linear-gradient(135deg, #2A2A2A, #1A1A1A); border-radius: 12px; width: 100%; height: 100%;"></div>
+        <a href="contact.html" class="nav-cta">Start a Project</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <h1 class="hero-animate">ABOUT <span class="accent">PROJECT BASELINE</span></h1>
+        <p class="hero-animate hero-animate-delay-1">Strategic consulting built on innovation, cultural intelligence, and two decades of results.</p>
+      </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="section">
+      <div class="container">
+        <div class="about-intro">
+          <div class="reveal-left">
+            <h2>FULL-CIRCLE SOLUTIONS FROM ONE SOURCE</h2>
+            <p>Project Baseline was founded in 2007 by Todd Walton, a connector and builder whose work spans culture, business, civic life, technology, and global community. Not because he chases industries, but because he genuinely understands people across every one of those lines.</p>
+            <p>From global engagement initiatives with Dr. Mae Jemison to launching Complex Community Week in Chicago, from Chevrolet partnerships with Rainbow PUSH to advising on South African market entry, our work is built on the kind of relationships that only come from genuine belonging in every room we enter.</p>
+            <p>We bring cultural fluency, strategic discipline, and the patience to stay long enough for results to compound. That combination has generated over 25 billion impressions across 20+ campaigns and built partnerships that span decades, not quarters.</p>
+          </div>
+          <div class="reveal-right" style="display:flex;align-items:center;justify-content:center;">
+            <img src="images/logos/project-baseline.png" alt="Project Baseline" style="max-width:100%;height:auto;">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Methodology -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">OUR PROCESS</div>
-        <h2>HOW WE WORK</h2>
-        <p>A demonstrated collaborative methodology sharpened over time to deliver results.</p>
-      </div>
-      <div class="method-steps">
-        <div class="method-step">
-          <h4>ASSESSMENT</h4>
-          <p>Deep-dive into your current state, goals, and challenges.</p>
-        </div>
-        <div class="method-step">
-          <h4>STRATEGY</h4>
-          <p>Building the roadmap with clear objectives and measurable outcomes.</p>
-        </div>
-        <div class="method-step">
-          <h4>DESIGN</h4>
-          <p>Creative solutions tailored to your brand identity and audience.</p>
-        </div>
-        <div class="method-step">
-          <h4>DEVELOPMENT</h4>
-          <p>Bringing strategies to life with disciplined execution.</p>
-        </div>
-        <div class="method-step">
-          <h4>IMPLEMENTATION</h4>
-          <p>Deploying solutions with attention to detail and timeline management.</p>
-        </div>
-        <div class="method-step">
-          <h4>MANAGEMENT</h4>
-          <p>Ongoing oversight to ensure sustained impact and optimization.</p>
+    <!-- Key Stats -->
+    <section class="section-compact section-gray" style="padding: 48px 0;">
+      <div class="container">
+        <div class="stats-bar stats-bar-light">
+          <div class="stat-item reveal stagger-1">
+            <div class="counter-value" data-count="25" data-suffix="B+">0B+</div>
+            <div class="stat-label">Total Impressions</div>
+          </div>
+          <div class="stat-item reveal stagger-2">
+            <div class="counter-value" data-count="13" data-suffix="+">0+</div>
+            <div class="stat-label">Major Campaigns</div>
+          </div>
+          <div class="stat-item reveal stagger-3">
+            <div class="counter-value" data-count="50" data-suffix="+">0+</div>
+            <div class="stat-label">Countries Reached</div>
+          </div>
+          <div class="stat-item reveal stagger-4">
+            <div class="counter-value" data-count="18" data-suffix="+">0+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Experience -->
-  <section class="section section-gray">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">TRACK RECORD</div>
-        <h2>PROVEN EXPERIENCE</h2>
-        <p>Two decades of impact across industries and sectors.</p>
-      </div>
-      <div class="experience-grid">
-        <div class="experience-card">
-          <div class="duration">18+ YEARS</div>
-          <h4>Strategic Consulting</h4>
-          <p>Brand development, project management, and innovation consulting for organizations of all sizes.</p>
-        </div>
-        <div class="experience-card">
-          <div class="duration">GLOBAL REACH</div>
-          <h4>International Projects</h4>
-          <p>Campaign strategy and cultural engagement initiatives spanning the US, South Africa, and beyond.</p>
-        </div>
-        <div class="experience-card">
-          <div class="duration">$350K+</div>
-          <h4>Campaign Budgets Managed</h4>
-          <p>National digital campaigns with coordinated media spends for leading brands.</p>
-        </div>
-        <div class="experience-card">
-          <div class="duration">150M+</div>
-          <h4>Impressions Generated</h4>
-          <p>Cross-platform campaigns that create measurable impact and meaningful engagement.</p>
+    <!-- ===== SCROLL-DRIVEN METHODOLOGY (centerpiece) ===== -->
+    <section class="section-dark">
+      <div class="container" style="max-width:1200px; text-align:center; padding-bottom:40px;">
+        <div class="section-header reveal">
+          <div class="label">OUR PROCESS</div>
+          <h2>HOW WE WORK</h2>
+          <p>A demonstrated collaborative methodology sharpened over time to deliver results.</p>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="methodology-scroll">
+        <div class="sticky-container">
+          <!-- Timeline Track (left) -->
+          <div class="timeline-track">
+            <div class="timeline-line"></div>
+            <div class="timeline-progress"></div>
+            <div class="timeline-dot active"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-dot"></div>
+            <div class="timeline-dot"></div>
+          </div>
+          <!-- Content Panels (right) -->
+          <div class="panels-container">
+            <div class="step-panel active" data-step="0">
+              <div class="step-number">01</div>
+              <h3>ASSESSMENT</h3>
+              <p>We start with a deep-dive into your current state, goals, and challenges. Understanding your organization, your audience, and the landscape you're operating in. No templates. No assumptions. Real listening that builds real understanding.</p>
+            </div>
+            <div class="step-panel" data-step="1">
+              <div class="step-number">02</div>
+              <h3>STRATEGY</h3>
+              <p>Building the roadmap with clear objectives and measurable outcomes. We connect the dots between your brand identity, your audience, and your business objectives to create a plan that's both ambitious and executable.</p>
+            </div>
+            <div class="step-panel" data-step="2">
+              <div class="step-number">03</div>
+              <h3>DESIGN</h3>
+              <p>Creative solutions tailored to your brand identity and audience. Whether it's campaign creative, experiential concepts, or digital strategy, every element is designed with intention and cultural intelligence.</p>
+            </div>
+            <div class="step-panel" data-step="3">
+              <div class="step-number">04</div>
+              <h3>DEVELOPMENT</h3>
+              <p>Bringing strategies to life with disciplined execution. This is where plans become real: assets are built, partnerships are activated, teams are aligned, and timelines are managed with precision.</p>
+            </div>
+            <div class="step-panel" data-step="4">
+              <div class="step-number">05</div>
+              <h3>IMPLEMENTATION</h3>
+              <p>Deploying solutions with attention to detail and timeline management. Launch day is just the beginning. We manage every moving piece to ensure the work lands the way it was designed to.</p>
+            </div>
+            <div class="step-panel" data-step="5">
+              <div class="step-number">06</div>
+              <h3>MANAGEMENT</h3>
+              <p>Ongoing oversight to ensure sustained impact and optimization. We stay. We measure. We adjust. Because the real value of any engagement is what compounds over time, not what launches with fanfare.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Quote -->
-  <section class="section">
-    <div class="quote-block">
-      <blockquote>Motivation comes from within, and I am here to help you <span class="highlight">ACTIVATE IT</span>.</blockquote>
-      <cite>TODD WALTON, FOUNDER</cite>
-    </div>
-  </section>
+    <!-- Experience Cards -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="label">TRACK RECORD</div>
+          <h2>PROVEN EXPERIENCE</h2>
+          <p>Two decades of impact across industries and geographies.</p>
+        </div>
+        <div class="experience-grid">
+          <div class="experience-card reveal stagger-1">
+            <div class="duration">REDBOX</div>
+            <h4>Director, Marketing Ops</h4>
+            <p>Directed Redbox Rewards launch: 15% revenue increase per user, $20M generated year two. 1B+ monthly kiosk impressions. Innovation Council: 300+ ideas, $25M-$100M projected revenue.</p>
+          </div>
+          <div class="experience-card reveal stagger-2">
+            <div class="duration">JEMISON GROUP</div>
+            <h4>Special Advisor to Dr. Mae Jemison</h4>
+            <p>Spearheaded Nexus Nairobi 2023: 1,500+ participants from 50+ countries. Co-founded Signal Hill Road book launch: 20,000+ readers, NPR and NYT coverage.</p>
+          </div>
+          <div class="experience-card reveal stagger-3">
+            <div class="duration">RAINBOW PUSH</div>
+            <h4>13 Years of Partnership</h4>
+            <p>MTV #WhatsYourDream (50M impressions), Chevrolet Money Matters (1,000+ educated), and strategic media campaigns spanning a decade of civic engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <h2>READY TO GET STARTED?</h2>
-      <p>Let's talk about your goals and how Project Baseline can help.</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">Start a Conversation</a>
-    </div>
-  </section>
+    <!-- Quote -->
+    <section class="section-compact">
+      <div class="quote-block reveal">
+        <blockquote>Motivation comes from within, and I am here to help you <span class="highlight">ACTIVATE IT</span>.</blockquote>
+        <cite>TODD WALTON, FOUNDER</cite>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container reveal">
+        <h2>READY TO GET STARTED?</h2>
+        <p>Let's talk about your goals and how Project Baseline can help.</p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Start a Project</a>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <a href="index.html" class="footer-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
-        <div class="footer-nav">
+        <nav class="footer-nav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="work.html">Work</a>
           <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </div>
+          <a href="contact.html">Start a Project</a>
+        </nav>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 Project Baseline. All rights reserved.</span>
@@ -154,11 +209,7 @@
     </div>
   </footer>
 
-  <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function() {
-      document.querySelector('.nav-links').classList.toggle('open');
-    });
-  </script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
