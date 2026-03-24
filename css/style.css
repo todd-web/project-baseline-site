@@ -582,7 +582,10 @@ ul { list-style: none; }
   gap: 24px;
 }
 
-.impact-item { text-align: center; }
+.impact-item {
+  text-align: center;
+  padding: 16px 8px;
+}
 
 .impact-value,
 .impact-number {
@@ -591,14 +594,15 @@ ul { list-style: none; }
   color: var(--red);
   line-height: 1;
   display: block;
+  margin-bottom: 8px;
 }
 
 .impact-label {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--gray-400);
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 8px;
+  letter-spacing: 2px;
+  font-weight: 500;
   display: block;
 }
 
