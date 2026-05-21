@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Project Baseline | Strategy, Structure, Systems</title>
+  <meta name="description" content="Project Baseline designs the strategy, structure, and systems organizations are built to last on.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Project Baseline">
+  <meta property="og:description" content="Strategy, structure, and systems for leaders building something meant to last.">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Crect x='9' y='7' width='4.5' height='18' fill='%23E31B23'/%3E%3Crect x='9' y='7' width='12' height='4.5' fill='%23E31B23'/%3E%3Crect x='9' y='14.5' width='10' height='4.5' fill='%23E31B23'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/cinematic.css">
+</head>
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div class="loader" id="loader" role="status" aria-label="Loading">
+    <div class="loader__inner">
+      <div class="loader__brand" id="loaderBrand"></div>
+      <div class="loader__bar"><span id="loaderFill"></span></div>
+      <div class="loader__pct" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- ============ SCROLL PROGRESS BAR ============ -->
+  <div class="scrollbar" id="scrollbar" aria-hidden="true"><span id="scrollbarFill"></span></div>
+
+  <!-- ============ FIXED HEADER ============ -->
+  <header class="site-header" id="header">
+    <a class="site-header__logo" id="headerLogo" href="#top" aria-label="Home"></a>
+    <nav class="site-header__nav" id="headerNav" aria-label="Primary"></nav>
+    <a class="site-header__cta" id="headerCta" href="#contact"></a>
+    <button class="site-header__menu" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ CINEMATIC STAGE (fixed, scroll-scrubbed frames) ============ -->
+  <div class="stage" id="stage" aria-hidden="true">
+    <img class="stage__poster" id="stagePoster" alt="">
+    <canvas class="stage__canvas" id="filmCanvas"></canvas>
+    <div class="stage__scrim"></div>
+  </div>
+
+  <!-- ============ SCROLL NARRATIVE ============ -->
+  <main id="top">
+
+    <!-- scenes are injected here by the engine, from site.config.js -->
+    <section class="film" id="film" aria-label="Cinematic narrative"></section>
+
+    <!-- scroll cue -->
+    <div class="scroll-cue" id="scrollCue" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="scroll-cue__line"></span>
+    </div>
+
+    <!-- ============ SERVICE CARD SECTION ============ -->
+    <section class="cards" id="cards" aria-label="Services">
+      <div class="cards__head">
+        <span class="eyebrow" id="cardsEyebrow"></span>
+        <h2 class="cards__title" id="cardsTitle"></h2>
+        <p class="cards__intro" id="cardsIntro"></p>
+      </div>
+      <div class="cards__grid" id="cardsGrid"></div>
+    </section>
+
+    <!-- ============ FOOTER / CLOSING CTA ============ -->
+    <footer class="site-footer" id="contact">
+      <span class="eyebrow site-footer__eyebrow" id="footerEyebrow"></span>
+      <h2 class="site-footer__line" id="footerLine"></h2>
+      <a class="site-footer__cta" id="footerCta" href="#"></a>
+      <div class="site-footer__meta" id="footerMeta"></div>
+    </footer>
+
+  </main>
+
+  <script src="assets/js/site.config.js"></script>
+  <script src="assets/js/cinematic.js"></script>
+</body>
+</html>
