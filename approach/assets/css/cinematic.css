@@ -282,7 +282,7 @@ ul { list-style: none; }
 .cards__grid {
   width: var(--shell); margin: 0 auto;
   display: grid; gap: clamp(1rem, 2.4vw, 1.8rem);
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 .card {
   position: relative; overflow: hidden;
@@ -296,6 +296,7 @@ ul { list-style: none; }
 .cards.is-in .card { opacity: 1; transform: translateY(0); }
 .cards.is-in .card:nth-child(2) { transition-delay: .12s; }
 .cards.is-in .card:nth-child(3) { transition-delay: .24s; }
+.cards.is-in .card:nth-child(4) { transition-delay: .36s; }
 .card__img {
   position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover;

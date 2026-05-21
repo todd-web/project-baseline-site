@@ -86,29 +86,36 @@ window.CINEMATIC_CONFIG = {
   /* ---------- service cards ---------- */
   cards: {
     eyebrow: "What we do",
-    title: "Three ways we build.",
+    title: "Four ways we build.",
     intro: "Every Project Baseline engagement opens with a baseline assessment. Where it goes next depends on what you are building.",
     items: [
       {
         img: "assets/media/card-1.jpg",
-        kicker: "01 / Clarity",
-        title: "Strategy & Org Design",
-        body: "Operating models, organizational structure, and the strategic baseline a leadership team can actually run on.",
+        kicker: "01 / Plan",
+        title: "Project Management & Consultation",
+        body: "Marketing, social enterprise, and program development run with disciplined budgets, timelines, and goals that a leadership team can actually deliver against.",
         alt: "Architectural foundation detail at dawn"
       },
       {
         img: "assets/media/card-2.jpg",
-        kicker: "02 / Structure",
-        title: "Membership & Revenue",
-        body: "Membership architecture, pricing, and revenue systems designed to compound instead of leak.",
+        kicker: "02 / Voice",
+        title: "Brand & Business Development",
+        body: "At the core of brand development is the story you tell. We help clients find their voice, strengthen it in the marketplace, and build audiences that stay.",
         alt: "Architectural structure detail at dusk"
       },
       {
         img: "assets/media/card-3.jpg",
-        kicker: "03 / Systems",
-        title: "Systems & AI Operations",
-        body: "The automation and operating systems that let a small team run like a much larger one.",
+        kicker: "03 / Build",
+        title: "Innovation & Ideation",
+        body: "Breaking through roadblocks with new technology and inventive branding. Includes our AI Implementation practice: readiness assessments, workflow automation, tool selection, and team adoption.",
         alt: "Architectural detail lit at night"
+      },
+      {
+        img: "assets/media/card-4.jpg",
+        kicker: "04 / Impact",
+        title: "Social Enterprise & Philanthropy",
+        body: "Strategies that reach business goals while enhancing human and environmental well-being. Includes our Nonprofit Consulting practice: strategic planning, grant writing, governance, and membership development.",
+        alt: "Architectural form rising into the light"
       }
     ]
   },
@@ -117,8 +124,8 @@ window.CINEMATIC_CONFIG = {
   footer: {
     eyebrow: "Start here",
     line: "Start at the [baseline].",
-    cta: { label: "Book a baseline call", href: "mailto:todd@project-baseline.com?subject=Baseline%20call" },
+    cta: { label: "Submit an inquiry", href: "/contact.html" },
     meta: '<span>&copy; 2026 Project Baseline Inc.</span>' +
-          '<span><a href="mailto:todd@project-baseline.com">todd@project-baseline.com</a></span>'
+          '<span><a href="/contact.html">Start a project</a></span>'
   }
 };
