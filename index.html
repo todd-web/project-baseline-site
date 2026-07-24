@@ -3,11 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Project Baseline is a strategic consulting firm delivering full-circle solutions in brand development, project management, innovation, and social enterprise. Over 25 billion impressions generated across 13 campaigns.">
-  <title>Project Baseline | Strategic Consulting</title>
+  <meta name="description" content="Project Baseline is a strategy and innovation consultancy. Brand development, project management, social enterprise, and AI implementation, including AI training and readiness programs for workforce and supplier development cohorts.">
+  <title>Project Baseline | Strategy, Innovation &amp; AI</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* v2 additions only. Nothing here overrides existing site rules. */
+    .lead-service {
+      background: linear-gradient(135deg, #1A1A1A 0%, #2A1416 100%);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      color: var(--white);
+      border: 1px solid rgba(227,27,35,0.25);
+      margin-bottom: 32px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .lead-service h3 {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      letter-spacing: 1px;
+      line-height: 1.05;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+    .lead-service p { color: var(--gray-300); margin-bottom: 22px; }
+    .lead-service .lead-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      color: var(--red-light);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .lead-list { list-style: none; display: grid; gap: 12px; }
+    .lead-list li {
+      font-size: 0.92rem;
+      color: var(--gray-200);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .lead-list li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 8px;
+      width: 8px; height: 8px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+    .credential-line {
+      font-size: 0.88rem;
+      color: var(--gray-300);
+      letter-spacing: 0.3px;
+      margin-top: 18px;
+    }
+    .credential-line strong { color: var(--white); font-weight: 700; }
+    /* 5-across services grid so AI sits as a peer practice, not above the others */
+    .services-grid.five { grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); }
+    .service-card.featured {
+      border: 2px solid var(--red);
+      box-shadow: 0 6px 20px rgba(227,27,35,0.12);
+    }
+    /* Sits flush inside the card. The base .service-card rule uses
+       overflow:hidden, so any negative offset here gets clipped. */
+    .service-flag {
+      position: absolute;
+      top: 0; right: 0;
+      z-index: 2;
+      background: var(--red);
+      color: var(--white);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 0 0 0 8px;
+      line-height: 1.2;
+    }
+    .service-card.featured { padding-top: 30px; }
+    .service-card.featured .card-link {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.82rem;
+    }
+    .work-card-panel {
+      background: linear-gradient(135deg, #0F1B2E 0%, #1A1A1A 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      text-align: center;
+    }
+    .work-card-panel span {
+      font-family: var(--font-display);
+      font-size: 1.9rem;
+      line-height: 1.1;
+      letter-spacing: 1px;
+      color: var(--white);
+    }
+    .work-card-panel span em { color: var(--red-light); font-style: normal; }
+    @media (max-width: 820px) {
+      .lead-service { grid-template-columns: 1fr; padding: 32px 24px; }
+      .lead-service h3 { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -18,15 +122,22 @@
       <div class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
-        <a href="approach/">Our Approach</a>
+        <div class="nav-dropdown">
+          <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI</a>
+          <div class="dropdown-menu">
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+            <div class="dropdown-divider"></div>
+            <a href="programs/">For Program Partners</a>
+          </div>
+        </div>
         <a href="work.html">Work</a>
         <div class="nav-dropdown">
           <a href="services.html">Services</a>
           <div class="dropdown-menu">
             <a href="services.html">All Services</a>
             <div class="dropdown-divider"></div>
+            <a href="approach/">Our Approach</a>
             <a href="https://nonprofit.project-baseline.com" target="_blank" rel="noopener">Nonprofit Consulting</a>
-            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
           </div>
         </div>
         <a href="contact.html" class="nav-cta">Start a Project</a>
@@ -45,18 +156,24 @@
     <section class="hero">
       <div class="container">
         <div class="hero-content">
-          <span class="hero-label hero-animate">Strategic Consulting</span>
+          <span class="hero-label hero-animate">Strategy &amp; Innovation</span>
           <h1 class="hero-animate hero-animate-delay-1">REALIZE THE <span class="accent">VALUE</span> OF INNOVATIVE THINKING.</h1>
-          <p class="hero-animate hero-animate-delay-2">Two decades of impact across brand strategy, experiential marketing, innovation consulting, and social enterprise. We build with purpose, cultural fluency, and the kind of relationships that make work last.</p>
+          <p class="hero-animate hero-animate-delay-2">Two decades of impact across brand strategy, experiential marketing, innovation consulting, and social enterprise. We build with purpose, cultural fluency, and the kind of relationships that make work last. Right now the sharpest edge of that work is AI, and we build the kind that actually runs.</p>
           <div class="hero-btns hero-animate hero-animate-delay-3">
             <a href="work.html" class="btn btn-primary btn-lg">View Our Work</a>
-            <a href="contact.html" class="btn btn-outline-light btn-lg">Start a Project</a>
+            <a href="https://ai.project-baseline.com" class="btn btn-outline-light btn-lg" target="_blank" rel="noopener">AI Implementation</a>
           </div>
+          <p class="credential-line hero-animate hero-animate-delay-3"><strong>Anthropic Ambassador.</strong> Selected by one of the world's leading AI companies. Two decades building for brands, campaigns, and communities.</p>
         </div>
       </div>
     </section>
 
-    <!-- ===== STATS BAR ===== -->
+    <!-- ===== STATS BAR =====
+         NOTE (v2): these four are the verified legacy track record and stay true.
+         Todd still owes one blessed, current AI proof point to swap in here.
+         Do not invent one, and do not reuse the conflicting agent counts
+         currently live on ai.project-baseline.com (110+ vs 163).
+    -->
     <section class="section-dark" style="padding: 0;">
       <div class="container">
         <div class="stats-bar">
@@ -80,7 +197,7 @@
       </div>
     </section>
 
-    <!-- ===== SERVICES ===== -->
+    <!-- ===== SERVICES: AI LEADS ===== -->
     <section class="section section-compact section-gray">
       <div class="container">
         <div class="section-header reveal">
@@ -88,18 +205,26 @@
           <h2>STRATEGIC SERVICES</h2>
           <p>Full-circle solutions from one source. Strategy, execution, and long-term partnership.</p>
         </div>
-        <div class="services-grid">
-          <div class="service-card reveal stagger-1">
+
+        <div class="services-grid five">
+          <div class="service-card featured reveal stagger-1">
+            <span class="service-flag">Flagship</span>
+            <div class="service-icon">&#9673;</div>
+            <h3>AI IMPLEMENTATION</h3>
+            <p>Production AI systems that survive a busy week, handed over with the manual so your people own them.</p>
+            <a href="https://ai.project-baseline.com" class="card-link" target="_blank" rel="noopener">Explore &#8594;</a>
+          </div>
+          <div class="service-card reveal stagger-2">
             <div class="service-icon">&#9881;</div>
             <h3>PROJECT MANAGEMENT</h3>
             <p>Marketing, social enterprise, and program development with disciplined budgets, timelines, and clear goals.</p>
           </div>
-          <div class="service-card reveal stagger-2">
+          <div class="service-card reveal stagger-3">
             <div class="service-icon">&#9830;</div>
             <h3>BRAND DEVELOPMENT</h3>
             <p>Finding your voice, strengthening it in the marketplace, and building an audience that stays.</p>
           </div>
-          <div class="service-card reveal stagger-3">
+          <div class="service-card reveal stagger-4">
             <div class="service-icon">&#9889;</div>
             <h3>INNOVATION &amp; IDEATION</h3>
             <p>Breaking through roadblocks with inventive branding strategies and technology integration.</p>
@@ -110,11 +235,51 @@
             <p>Digital and experiential campaigns that reach business goals while creating meaningful change.</p>
           </div>
         </div>
+
+        <div class="lead-service reveal" style="margin-top:36px;margin-bottom:0;">
+          <div>
+            <span class="lead-tag">Where Innovation Is Moving Fastest</span>
+            <h3>AI IMPLEMENTATION</h3>
+            <p>Most teams have tried AI and found nothing that stuck. We build the systems that survive a busy week, then hand them over with the manual so your people own them.</p>
+            <a href="https://ai.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Explore AI Services &#8594;</a>
+          </div>
+          <ul class="lead-list">
+            <li>AI readiness assessment with a scored report and a named action plan</li>
+            <li>Custom AI agents configured for a specific role and operation</li>
+            <li>Workflow automation across the tools a team already uses</li>
+            <li>Cohort training for programs that develop small businesses</li>
+            <li>Fractional AI leadership for organizations that need direction and hands</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- ===== SPECIALIZED CONSULTING (moved up per feedback item #4) ===== -->
+    <!-- ===== PROGRAM PARTNERS BAND ===== -->
     <section class="section section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">For Program Partners</span>
+          <h2>AI TRAINING BUILT FOR COHORTS</h2>
+          <p>If you run a workforce, trade ally, incubator, or supplier development program, your participants are asking about AI and most of them have nowhere useful to start.</p>
+        </div>
+        <div class="subsidiary-grid">
+          <div class="subsidiary-card reveal stagger-1">
+            <h3>WHAT A PROGRAM GETS</h3>
+            <p>A cohort session built around the trades actually in the room. A per-participant readiness assessment that returns a scored report and an action plan. One-on-one implementation for participants who want to go further. Training for your own program staff.</p>
+            <a href="programs/" class="btn btn-primary">See the Program Model &#8594;</a>
+          </div>
+          <div class="subsidiary-card reveal stagger-2">
+            <h3>ALREADY DELIVERED</h3>
+            <p>Built and delivered inside a utility trade ally development program, including a cohort session, a live readiness assessment tool for contractors, two days of in-person training for program staff, and one-on-one implementation work with individual contractors.</p>
+            <a href="contact.html" class="btn btn-primary">Start a Conversation &#8594;</a>
+          </div>
+        </div>
+        <p style="color:var(--gray-400);max-width:820px;margin:28px auto 0;text-align:center;font-size:0.95rem;line-height:1.7;">AI is where most of these conversations start right now, and it is not the only place they go. Program design, brand and outreach strategy, partnerships, and reaching a community you are trying to serve are all the same practice here.</p>
+      </div>
+    </section>
+
+    <!-- ===== SPECIALIZED CONSULTING ===== -->
+    <section class="section section-compact">
       <div class="container">
         <div class="section-header reveal">
           <span class="label">Platforms</span>
@@ -123,31 +288,49 @@
         </div>
         <div class="subsidiary-grid">
           <div class="subsidiary-card reveal stagger-1">
-            <h3>NONPROFIT CONSULTING</h3>
-            <p>Strategic consulting, grant writing, and organizational development for nonprofits. Full client portal with project tracking and deliverable management.</p>
-            <a href="https://nonprofit.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Visit Platform &#8594;</a>
-          </div>
-          <div class="subsidiary-card reveal stagger-2">
             <h3>AI IMPLEMENTATION</h3>
             <p>AI strategy, workflow automation, and implementation consulting for organizations ready to leverage artificial intelligence practically and effectively.</p>
             <a href="https://ai.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Visit Platform &#8594;</a>
+          </div>
+          <div class="subsidiary-card reveal stagger-2">
+            <h3>NONPROFIT CONSULTING</h3>
+            <p>Strategic consulting, grant writing, and organizational development for nonprofits. Full client portal with project tracking and deliverable management.</p>
+            <a href="https://nonprofit.project-baseline.com" class="btn btn-primary" target="_blank" rel="noopener">Visit Platform &#8594;</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FEATURED WORK (3 cards with images per feedback) ===== -->
+    <!-- ===== FEATURED WORK ===== -->
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
           <span class="label">Selected Work</span>
           <h2>PROJECTS THAT MOVE THE NEEDLE</h2>
-          <p>Campaign strategy, brand development, and experiential solutions for organizations creating real impact.</p>
+          <p>AI implementation, campaign strategy, and experiential solutions for organizations creating real impact.</p>
         </div>
         <div class="work-grid">
 
-          <!-- Nexus Nairobi -->
+          <!-- AI: utility trade ally program.
+               UNNAMED pending client permission. Upgrade to the named
+               Walker-Miller / Nicor Gas case study once Marco approves. -->
           <div class="work-card reveal stagger-1">
+            <div class="work-card-img work-card-panel">
+              <span>AI FOR A<br><em>TRADE ALLY</em><br>PROGRAM</span>
+            </div>
+            <div class="work-card-body">
+              <div class="work-card-tags">
+                <span class="work-tag">AI Implementation</span>
+                <span class="work-tag">Workforce Programs</span>
+              </div>
+              <h3>UTILITY CONTRACTOR AI PROGRAM</h3>
+              <p>A cohort AI session, a live per-contractor readiness assessment, two days of in-person training for program staff, and one-on-one implementation with individual contractors.</p>
+              <a href="programs/" class="card-link">See the Program Model &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Nexus Nairobi -->
+          <div class="work-card reveal stagger-2">
             <div class="work-card-img">
               <img src="images/projects/nexus-nairobi.jpg" alt="Nexus Nairobi 2023" loading="lazy">
             </div>
@@ -163,7 +346,7 @@
           </div>
 
           <!-- Rainbow PUSH + Chevrolet -->
-          <div class="work-card reveal stagger-2">
+          <div class="work-card reveal stagger-3">
             <div class="work-card-img">
               <img src="images/projects/money-matters-event.jpg" alt="Rainbow PUSH Money Matters Event" loading="lazy">
             </div>
@@ -175,22 +358,6 @@
               <h3>RAINBOW PUSH + CHEVROLET</h3>
               <p>Financial literacy initiative connecting Chevrolet's brand with Rainbow PUSH's community reach, educating 1,000+ participants nationally.</p>
               <a href="work/rainbow-push-chevrolet.html" class="card-link">View Case Study &#8594;</a>
-            </div>
-          </div>
-
-          <!-- Find Where The Wind Goes -->
-          <div class="work-card reveal stagger-3">
-            <div class="work-card-img" style="background:#0A1628;">
-              <img src="images/projects/fwtwg-banner.png" alt="Find Where The Wind Goes" loading="lazy" style="object-fit:contain;object-position:right center;">
-            </div>
-            <div class="work-card-body">
-              <div class="work-card-tags">
-                <span class="work-tag">Publishing</span>
-                <span class="work-tag">Digital Marketing</span>
-              </div>
-              <h3>FIND WHERE THE WIND GOES</h3>
-              <p>Publishing strategy and community outreach for Dr. Mae Jemison's memoir, reaching 20,000+ young readers and earning NPR and New York Times features.</p>
-              <a href="work/find-where-the-wind-goes.html" class="card-link">View Case Study &#8594;</a>
             </div>
           </div>
 
@@ -246,8 +413,10 @@
         <nav class="footer-nav">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
+          <a href="approach/">Our Approach</a>
           <a href="work.html">Work</a>
           <a href="services.html">Services</a>
+          <a href="programs/">For Programs</a>
           <a href="contact.html">Start a Project</a>
           <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>

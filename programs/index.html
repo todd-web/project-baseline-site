@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI training, readiness assessment, and implementation built for workforce development, trade ally, incubator, and supplier diversity program cohorts.">
+  <title>AI for Program Partners | Project Baseline</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <style>
+    .ladder { display: grid; gap: 20px; counter-reset: rung; }
+    .rung {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 24px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--red);
+      border-radius: var(--radius-lg);
+      padding: 28px 28px 28px 24px;
+      align-items: start;
+    }
+    .rung-num {
+      font-family: var(--font-display);
+      font-size: 2.6rem;
+      line-height: 1;
+      color: var(--red);
+      letter-spacing: 1px;
+    }
+    .rung h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      letter-spacing: 0.8px;
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+    .rung p { color: var(--gray-700); font-size: 0.95rem; line-height: 1.65; }
+    .rung .who {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.72rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gray-500);
+    }
+    .fit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .fit-card {
+      background: var(--gray-900);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+    }
+    .fit-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.8px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .fit-card p { color: var(--gray-400); font-size: 0.9rem; line-height: 1.6; }
+    .qlist { list-style: none; display: grid; gap: 14px; max-width: 780px; }
+    .qlist li {
+      padding-left: 26px;
+      position: relative;
+      color: var(--gray-700);
+      line-height: 1.6;
+    }
+    .qlist li::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 9px;
+      width: 9px; height: 9px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+    .proof-note {
+      background: var(--gray-100);
+      border-left: 4px solid var(--red);
+      border-radius: var(--radius);
+      padding: 26px 28px;
+      max-width: 860px;
+    }
+    .proof-note p { color: var(--gray-700); line-height: 1.7; }
+    .proof-note p + p { margin-top: 14px; }
+    @media (max-width: 720px) {
+      .rung { grid-template-columns: 1fr; gap: 8px; padding: 24px; }
+      .rung-num { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header>
+    <nav class="nav">
+      <a href="../index.html" class="nav-logo"><span class="accent">PB</span> PROJECT BASELINE</a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <div class="nav-dropdown">
+          <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI</a>
+          <div class="dropdown-menu">
+            <a href="https://ai.project-baseline.com" target="_blank" rel="noopener">AI Implementation</a>
+            <div class="dropdown-divider"></div>
+            <a href="index.html" class="active">For Program Partners</a>
+          </div>
+        </div>
+        <a href="../work.html">Work</a>
+        <a href="../services.html">Services</a>
+        <a href="../contact.html" class="nav-cta">Start a Conversation</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="hero-label">For Program Partners</span>
+        <h1>AI TRAINING BUILT FOR <span class="accent">COHORTS</span>.</h1>
+        <p>Workforce development, trade ally, incubator, and supplier diversity programs are all getting the same question from participants right now. What do we do about AI. This is the answer, built to run inside a program rather than around it.</p>
+      </div>
+    </section>
+
+    <!-- ===== THE PROBLEM ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">The Gap</span>
+          <h2>YOUR PARTICIPANTS ARE ASKING. MOST ANSWERS ARE USELESS TO THEM.</h2>
+        </div>
+        <div class="proof-note reveal">
+          <p>Neither a general AI overview nor a tool list survives contact with a contractor's week. The small businesses in your cohorts are running lean, and anything that takes more setup than it saves gets abandoned inside a month.</p>
+          <p>What works is narrower and less exciting. Start from the work they actually do, their bids, their invoices, their follow-up, their scheduling. Put one thing in front of them that removes real hours. Then give them a way to see what to do next without hiring a consultant.</p>
+          <p>That is what this is built to do, and it is built to report cleanly back to a program manager who has to account for outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THE MODEL ===== -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">The Model</span>
+          <h2>FOUR PARTS, AND YOU CAN TAKE ANY ONE OF THEM</h2>
+          <p>Each part stands on its own. Most programs start with the session and add from there.</p>
+        </div>
+        <div class="ladder">
+
+          <div class="rung reveal stagger-1">
+            <div class="rung-num">01</div>
+            <div>
+              <h3>THE COHORT SESSION</h3>
+              <p>A working session built around the trades and businesses actually in the room, not a general AI overview. Participants leave with tools they can open the next morning and a specific first move for their own operation. Delivered live, in person or virtual, sized to your program's format.</p>
+              <span class="who">For your participants</span>
+            </div>
+          </div>
+
+          <div class="rung reveal stagger-2">
+            <div class="rung-num">02</div>
+            <div>
+              <h3>THE READINESS ASSESSMENT</h3>
+              <p>Each participant answers a short set of questions about their business and receives a personalized report with a scored readiness picture and a named action plan. It scales to a whole cohort without adding facilitator time, and it gives the program a consistent baseline to point at. Already built and running for a trade ally cohort.</p>
+              <span class="who">For your participants, at cohort scale</span>
+            </div>
+          </div>
+
+          <div class="rung reveal stagger-3">
+            <div class="rung-num">03</div>
+            <div>
+              <h3>ONE-ON-ONE IMPLEMENTATION</h3>
+              <p>For participants ready to go further, direct work with the business owner until something is actually running inside their operation. Built in their own accounts, handed over with an operating manual so they own it after the engagement ends. This is the tier that turns training into a result a program can point to.</p>
+              <span class="who">For participants who are ready to move</span>
+            </div>
+          </div>
+
+          <div class="rung reveal stagger-4">
+            <div class="rung-num">04</div>
+            <div>
+              <h3>PROGRAM STAFF TRAINING</h3>
+              <p>The same work pointed at your own team instead of your participants. Intake, reporting, outreach, scheduling, and the administrative load that eats program capacity. Delivered as a working session with your staff, using your actual workflows.</p>
+              <span class="who">For your team</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROOF ===== -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Already Delivered</span>
+          <h2>ALL FOUR PARTS HAVE ALREADY RUN</h2>
+          <p>All four parts have been delivered inside a utility trade ally development program.</p>
+        </div>
+        <div class="fit-grid">
+          <div class="fit-card reveal stagger-1">
+            <h3>THE SESSION</h3>
+            <p>An AI session delivered to a utility trade ally development cohort, built around the specific trades in the room.</p>
+          </div>
+          <div class="fit-card reveal stagger-2">
+            <h3>THE ASSESSMENT</h3>
+            <p>A live readiness assessment tool built for energy efficiency contractors, returning a personalized report and action plan.</p>
+          </div>
+          <div class="fit-card reveal stagger-3">
+            <h3>THE IMPLEMENTATION</h3>
+            <p>One-on-one engagements with individual contractors from the cohort, funded through the program's own stipend structure.</p>
+          </div>
+          <div class="fit-card reveal stagger-4">
+            <h3>THE STAFF TRAINING</h3>
+            <p>Two days of in-person AI training delivered to the program implementer's own administrative team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SCOPING ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">How Scoping Works</span>
+          <h2>NO PACKAGE UNTIL WE KNOW YOUR PROGRAM.</h2>
+          <p>Every program runs on different funding, different reporting, and a different cohort. Pricing gets built against yours, not against somebody else's.</p>
+        </div>
+        <ul class="qlist reveal">
+          <li>How many participants are in a cohort, and how many cohorts run per year</li>
+          <li>What stage participants are at, from pre-revenue through established operators</li>
+          <li>What the program is actually trying to move, and how that gets reported</li>
+          <li>Which funding line this would sit in, and what procurement that path requires</li>
+          <li>What formats already work in your program, in person, virtual, or a mix</li>
+        </ul>
+        <p style="margin-top:28px;color:var(--gray-600);max-width:780px;">One call answers most of this. Nothing gets priced before that conversation, and nothing gets proposed that your program has not asked for.</p>
+      </div>
+    </section>
+
+    <!-- ===== BEYOND AI ===== -->
+    <section class="section section-gray">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Wider Than AI</span>
+          <h2>THE PRACTICE IS WIDER THAN AI</h2>
+        </div>
+        <div class="proof-note reveal">
+          <p>Project Baseline is a strategy and innovation practice with two decades behind it. AI is the sharpest tool in that kit right now, which is why it is usually the first conversation, and it is not the whole kit.</p>
+          <p>Programs come with problems that have nothing to do with software, like a community that is not showing up, a cohort that keeps under-filling, or brand and outreach that is not landing with the people it was built for. Partnership structures, program design, and the experiential work of getting people into a room all sit in the same place.</p>
+          <p>That is the same practice from the same people, and we were doing it long before we were doing AI. If what your program actually needs sits on that side, say so and we will talk about that instead.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+      <div class="container reveal">
+        <h2>LET'S TALK ABOUT YOUR COHORT</h2>
+        <p>Tell us what your program runs and what your participants keep asking for. We will tell you honestly where AI helps and where it does not.</p>
+        <a href="../contact.html" class="btn btn-primary btn-lg">Start a Conversation</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo"><span class="accent">PB</span> PROJECT BASELINE</div>
+        <nav class="footer-nav">
+          <a href="../index.html">Home</a>
+          <a href="../about.html">About</a>
+          <a href="../work.html">Work</a>
+          <a href="../services.html">Services</a>
+          <a href="index.html">For Programs</a>
+          <a href="../contact.html">Start a Project</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+          <a href="/trust">Trust Center</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Project Baseline. All rights reserved.</span>
+        <a href="mailto:info@project-baseline.com">info@project-baseline.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+</body>
+</html>
