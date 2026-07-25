@@ -179,8 +179,9 @@
     <article class="legal-page">
       <div class="legal-meta">Legal | Privacy</div>
       <h1>PRIVACY POLICY</h1>
-      <p class="effective"><strong>Effective Date:</strong> May 22, 2026 | <strong>Last Updated:</strong> May 22, 2026 | <strong>Version:</strong> 2.0</p>
+      <p class="effective"><strong>Effective Date:</strong> May 22, 2026 | <strong>Last Updated:</strong> July 25, 2026 | <strong>Version:</strong> 2.1</p>
       <p class="effective"><strong>Entity:</strong> Project Baseline Inc. | <strong>Supersedes:</strong> Privacy Policy v1.0 (effective March 10, 2026)</p>
+      <p class="effective"><strong>Changes in v2.1 (July 25, 2026):</strong> Added Plaid Inc. as a sub-processor, added retention entries for Project Baseline's own bank connection data, and clarified that the Plaid connection covers the company's own corporate accounts only. Advance notice of the new sub-processor is given under the 30-day commitment in the Sub-processors section.</p>
 
       <div class="intro-block">
         <p><strong>Project Baseline Inc.</strong> ("Project Baseline," "PB," "we," "our," or "us") is a Colorado profit corporation (EIN 27-0639457) headquartered in Broadview, Illinois. We provide strategic consulting, AI implementation services, and related professional services to nonprofit organizations, small and mid-market businesses, civic organizations, and individuals.</p>
@@ -211,7 +212,8 @@
         <li><strong>Service intake information:</strong> Responses to intake questionnaires, project briefs, business context for AI tools, trade specialization for TAD AI Readiness submissions, ZIP code, years in business, crew size, certification status, and stated pain points</li>
         <li><strong>Uploaded documents:</strong> Files you submit through the client portal (articles of incorporation, bylaws, financials, program materials, photographs, deliverables-in-progress)</li>
         <li><strong>Communications:</strong> Email correspondence, portal messages, scheduled call notes, meeting transcripts produced by our transcription sub-processor when you participate in a recorded meeting (you are notified before recording starts)</li>
-        <li><strong>Payment information:</strong> When you pay for a PB service, payment is processed by Stripe. We receive a payment confirmation, the payer name and email, and an amount. We never receive or store full payment card numbers, bank account numbers, or any other sensitive financial data. Stripe's privacy policy is at <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>.</li>
+        <li><strong>Payment information:</strong> When you pay for a PB service, payment is processed by Stripe. We receive a payment confirmation, the payer name and email, and an amount. We never receive or store your full payment card numbers, your bank account numbers, or your bank login credentials. Stripe's privacy policy is at <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a>.</li>
+          <li><strong>Our own financial accounts:</strong> Separately from anything involving you, Project Baseline connects its <em>own</em> corporate bank accounts to its internal accounting systems through Plaid, so the company can keep its own books. That connection covers accounts belonging to Project Baseline, Inc. only. It never touches a client's, a visitor's, or any other person's financial accounts, and we never hold bank login credentials for any account, including our own. Plaid's privacy policy is at <a href="https://plaid.com/legal/#end-user-privacy-policy" target="_blank" rel="noopener">plaid.com/legal</a>.</li>
       </ul>
 
       <h3>2.2 Information collected automatically</h3>
@@ -277,6 +279,7 @@
             <tr><td>12</td><td>DigitalOcean, LLC</td><td>Hosting for self-hosted PB tools</td><td>All self-hosted application data, including client portal accounts, uploaded documents, generated PDFs, abuse-control telemetry</td><td>United States</td></tr>
             <tr><td>13</td><td>Supabase, Inc.</td><td>Database services for dashboard snapshots</td><td>Limited operational data</td><td>United States</td></tr>
             <tr><td>14</td><td>Mailchimp (Rocket Science Group LLC)</td><td>Email marketing (placeholder, not currently active for PB)</td><td>If activated, contact info for opt-in recipients only</td><td>United States</td></tr>
+            <tr><td>15</td><td>Plaid Inc.</td><td>Connects Project Baseline's own corporate bank accounts to internal accounting systems</td><td>Company financial account and transaction data only. No client or visitor data.</td><td>United States</td></tr>
           </tbody>
         </table>
       </div>
@@ -319,6 +322,8 @@
             <tr><td>Meeting transcripts (Fireflies)</td><td>1 year in Fireflies; exports to Drive follow the engagement retention schedule above</td></tr>
             <tr><td>System logs (nginx, application)</td><td>30 days</td></tr>
             <tr><td>Backups (encrypted)</td><td>90 days rolling, plus annual snapshots retained 7 years</td></tr>
+            <tr><td>Bank connection credentials for PB's own accounts (Plaid access tokens)</td><td>Life of the connection; destroyed on disconnection</td></tr>
+            <tr><td>PB's own company bank account records and transactions</td><td>7 years (tax record requirement)</td></tr>
           </tbody>
         </table>
       </div>
