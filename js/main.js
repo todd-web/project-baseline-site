@@ -3,6 +3,11 @@
 (function() {
   'use strict';
 
+  // Reveals hide content only once we know the observer can show it again.
+  if ('IntersectionObserver' in window) {
+    document.documentElement.className += ' js-reveal';
+  }
+
   // ===== SCROLL-TRIGGERED REVEALS =====
   function initReveals() {
     var revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');

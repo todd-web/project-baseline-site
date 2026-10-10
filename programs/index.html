@@ -16,7 +16,6 @@
       gap: 24px;
       background: var(--white);
       border: 1px solid var(--gray-200);
-      border-left: 4px solid var(--red);
       border-radius: var(--radius-lg);
       padding: 28px 28px 28px 24px;
       align-items: start;
@@ -39,11 +38,11 @@
     .rung .who {
       display: inline-block;
       margin-top: 12px;
-      font-size: 0.72rem;
-      letter-spacing: 1.4px;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
       font-weight: 700;
-      color: var(--gray-500);
+      color: var(--gray-600);
     }
     .fit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
     .fit-card {
@@ -77,13 +76,15 @@
     }
     .proof-note {
       background: var(--gray-100);
-      border-left: 4px solid var(--red);
       border-radius: var(--radius);
       padding: 26px 28px;
       max-width: 860px;
+      width: fit-content;
     }
     .proof-note p { color: var(--gray-700); line-height: 1.7; }
     .proof-note p + p { margin-top: 14px; }
+    .proof-note p,
+    .rung p { max-width: 54ch; }
     @media (max-width: 720px) {
       .rung { grid-template-columns: 1fr; gap: 8px; padding: 24px; }
       .rung-num { font-size: 2rem; }
@@ -124,7 +125,6 @@
     <!-- ===== HERO ===== -->
     <section class="page-hero">
       <div class="container">
-        <span class="hero-label">For Program Partners</span>
         <h1>AI TRAINING BUILT FOR <span class="accent">COHORTS</span>.</h1>
         <p>Workforce development, trade ally, incubator, and supplier diversity programs are all getting the same question from participants right now. What do we do about AI. This is the answer, built to run inside a program rather than around it.</p>
       </div>
@@ -134,7 +134,6 @@
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">The Gap</span>
           <h2>YOUR PARTICIPANTS ARE ASKING. MOST ANSWERS ARE USELESS TO THEM.</h2>
         </div>
         <div class="proof-note reveal">
@@ -149,7 +148,6 @@
     <section class="section section-gray">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">The Model</span>
           <h2>FOUR PARTS, AND YOU CAN TAKE ANY ONE OF THEM</h2>
           <p>Each part stands on its own. Most programs start with the session and add from there.</p>
         </div>
@@ -199,7 +197,6 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">Already Delivered</span>
           <h2>ALL FOUR PARTS HAVE ALREADY RUN</h2>
           <p>All four parts have been delivered inside a utility trade ally development program.</p>
         </div>
@@ -228,7 +225,6 @@
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">How Scoping Works</span>
           <h2>NO PACKAGE UNTIL WE KNOW YOUR PROGRAM.</h2>
           <p>Every program runs on different funding, different reporting, and a different cohort. Pricing gets built against yours, not against somebody else's.</p>
         </div>
@@ -247,7 +243,6 @@
     <section class="section section-gray">
       <div class="container">
         <div class="section-header reveal">
-          <span class="label">Wider Than AI</span>
           <h2>THE PRACTICE IS WIDER THAN AI</h2>
         </div>
         <div class="proof-note reveal">

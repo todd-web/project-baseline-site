@@ -17,13 +17,6 @@
       padding: 140px 24px 80px;
       color: var(--gray-800);
     }
-    .legal-page .legal-meta {
-      font-size: 13px;
-      color: var(--gray-500);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 12px;
-    }
     .legal-page h1 {
       font-family: var(--font-display);
       font-size: clamp(2.5rem, 5vw, 3.5rem);
@@ -39,10 +32,9 @@
     .legal-page .effective strong { color: var(--black); }
     .legal-page .intro-block {
       padding: 24px;
-      border-left: 4px solid var(--red);
       background: var(--gray-100);
       margin: 32px 0 40px;
-      border-radius: 0 var(--radius) var(--radius) 0;
+      border-radius: var(--radius);
     }
     .legal-page .intro-block p { margin-bottom: 12px; }
     .legal-page .intro-block p:last-child { margin-bottom: 0; }
@@ -86,13 +78,19 @@
     }
     .legal-page ol { list-style: decimal; }
     .legal-page li { margin-bottom: 8px; }
+    .legal-page p,
+    .legal-page li,
+    .legal-page .intro-block { max-width: 54ch; }
+    .legal-page td p,
+    .legal-page td li { max-width: none; }
     .legal-page strong { color: var(--black); font-weight: 600; }
-    .legal-page a { color: var(--red); font-weight: 500; }
-    .legal-page a:hover { color: var(--red-dark); text-decoration: underline; }
+    .legal-page a { color: var(--red-dark); font-weight: 500; }
+    .legal-page a:hover { color: var(--black); text-decoration: underline; }
     .legal-page .table-wrap {
       overflow-x: auto;
       margin: 20px 0;
       border: 1px solid var(--gray-200);
+      padding: 8px 12px;
       border-radius: var(--radius);
     }
     .legal-page table {
@@ -129,8 +127,8 @@
       margin-top: 0;
       font-size: 0.85rem;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--gray-500);
+      letter-spacing: 1px;
+      color: var(--gray-600);
     }
     .legal-page .doc-control ul {
       list-style: none;
@@ -177,7 +175,6 @@
 
   <main>
     <article class="legal-page">
-      <div class="legal-meta">Legal | Privacy</div>
       <h1>PRIVACY POLICY</h1>
       <p class="effective"><strong>Effective Date:</strong> May 22, 2026 | <strong>Last Updated:</strong> July 25, 2026 | <strong>Version:</strong> 2.1</p>
       <p class="effective"><strong>Entity:</strong> Project Baseline Inc. | <strong>Supersedes:</strong> Privacy Policy v1.0 (effective March 10, 2026)</p>

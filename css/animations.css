@@ -1,36 +1,39 @@
-/* ===== SCROLL-TRIGGERED REVEAL SYSTEM ===== */
-.reveal {
+/* ===== SCROLL-TRIGGERED REVEAL SYSTEM =====
+   Content is visible by default. main.js adds .js-reveal to <html>
+   only when IntersectionObserver exists, so a failed or blocked
+   script never leaves the page at opacity 0. */
+.js-reveal .reveal {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal-left {
+.js-reveal .reveal-left {
   opacity: 0;
   transform: translateX(-40px);
   transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal-right {
+.js-reveal .reveal-right {
   opacity: 0;
   transform: translateX(40px);
   transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal-scale {
+.js-reveal .reveal-scale {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.reveal.active,
-.reveal-left.active,
-.reveal-right.active,
-.reveal-scale.active {
+.js-reveal .reveal.active,
+.js-reveal .reveal-left.active,
+.js-reveal .reveal-right.active,
+.js-reveal .reveal-scale.active {
   opacity: 1;
   transform: translate(0) scale(1);
 }
@@ -114,7 +117,6 @@
 .methodology-scroll .timeline-dot.active {
   background: var(--red);
   border-color: var(--red);
-  box-shadow: 0 0 20px rgba(227, 27, 35, 0.5);
 }
 
 .methodology-scroll .step-panel {
@@ -216,11 +218,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.work-card:hover .work-card-img img {
-  transform: scale(1.05);
 }
 
 /* ===== CLIENT LOGO SCROLL ===== */
@@ -382,4 +379,15 @@
 .service-card-compact p {
   font-size: 0.88rem;
   line-height: 1.6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal .reveal,
+  .js-reveal .reveal-left,
+  .js-reveal .reveal-right,
+  .js-reveal .reveal-scale { opacity: 1; transform: none; transition: none; }
+  .hero-animate,
+  .hero-animate-delay-1,
+  .hero-animate-delay-2,
+  .hero-animate-delay-3 { animation: none; opacity: 1; }
 }

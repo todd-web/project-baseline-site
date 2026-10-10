@@ -84,7 +84,7 @@
         '<img class="card__img" src="' + it.img + '" alt="' + (it.alt || it.title) + '" loading="lazy">' +
         '<div class="card__fade"></div>' +
         '<div class="card__body">' +
-          '<span class="card__kicker">' + it.kicker + "</span>" +
+          (it.kicker ? '<span class="card__kicker">' + it.kicker + "</span>" : "") +
           '<h3 class="card__title">' + it.title + "</h3>" +
           '<p class="card__text">' + it.body + "</p>" +
           '<div class="card__rule"></div>' +
