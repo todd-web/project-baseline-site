@@ -1,0 +1,17 @@
+# Secrets and local credentials
+.env
+*.env
+.dev.vars
+credentials.*
+private/
+.mcp-auth/
+
+# Tooling caches
+.wrangler/
+node_modules/
+.playwright-mcp/
+
+# QA and scratch output (lives in C:/ClaudeWork/output, never here)
+qa/
+scratch/
+*.log
