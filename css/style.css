@@ -1176,3 +1176,22 @@ a:focus-visible,
   font-weight: 500;
   color: var(--gray-300);
 }
+
+/* ===== ROUND 3 ===== */
+.section-pad-top { padding-top: 80px; }
+
+/* Slide-in reveals start 40px off-axis; clip so they never widen the page */
+main { overflow-x: clip; }
+
+/* Lowercase x in TEDx inside an all-caps display face */
+.lc-x {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72em;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  .section-pad-top { padding-top: 60px; }
+}
