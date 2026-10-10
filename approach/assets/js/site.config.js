@@ -63,7 +63,7 @@ window.CINEMATIC_CONFIG = {
     {
       align: "right",
       title: "Structure turns vision into something that [holds].",
-      body: "Membership models, revenue architecture, the operating rhythm of a real organization. Vision is cheap. Structure is the work."
+      body: "Membership models, revenue architecture, the operating rhythm of a real organization. Structure is the work that makes a vision hold."
     },
     {
       align: "left",

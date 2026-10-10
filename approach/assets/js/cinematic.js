@@ -65,7 +65,8 @@
     sec.innerHTML =
       '<div class="scene__inner">' +
         (sc.eyebrow ? '<span class="eyebrow scene__eyebrow">' + sc.eyebrow + "</span>" : "") +
-        '<h2 class="scene__title">' + accentTitle(sc.title) + "</h2>" +
+        (i === 0 ? '<h1 class="scene__title">' + accentTitle(sc.title) + "</h1>"
+                 : '<h2 class="scene__title">' + accentTitle(sc.title) + "</h2>") +
         (sc.body ? '<p class="scene__body">' + sc.body + "</p>" : "") +
       "</div>";
     filmEl.appendChild(sec);
